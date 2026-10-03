@@ -4,16 +4,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useDemo } from '@/context/DemoContext';
 
 export default function Header() {
   const pathname = usePathname();
+  const { activeDemo } = useDemo();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'HOME', href: '/' },
-    { label: 'ABOUT', href: '/about' },
-    { label: 'PROJECTS', href: '/projects' },
-    { label: 'CONTACT', href: '/contact' },
+    { num: '01', label: 'HOME', href: '/' },
+    { num: '02', label: 'ABOUT', href: '/about' },
+    { num: '03', label: 'PROJECTS', href: '/projects' },
+    { num: '04', label: 'CONTACT', href: '/contact' },
   ];
 
   const isActive = (href: string) => {
@@ -26,7 +28,7 @@ export default function Header() {
   const closeMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="site-header">
+    <header className={`site-header header-demo-${activeDemo}`}>
       <div className="container header-inner">
         <Link href="/" className="brand-link" onClick={closeMenu}>
           <Image
@@ -47,6 +49,9 @@ export default function Header() {
           <ul className="nav-list">
             {navLinks.map((link) => {
               const active = isActive(link.href);
+              const displayLabel =
+                activeDemo === 1 ? link.label : `${link.num} ${link.label}`;
+
               return (
                 <li key={link.href} className="nav-item">
                   <Link
@@ -54,7 +59,8 @@ export default function Header() {
                     className={`nav-link ${active ? 'active' : ''}`}
                     aria-current={active ? 'page' : undefined}
                   >
-                    {link.label}
+                    {activeDemo === 2 && active && <span className="nav-index-dot">■ </span>}
+                    {displayLabel}
                   </Link>
                 </li>
               );
@@ -82,6 +88,9 @@ export default function Header() {
           <ul className="mobile-drawer-list">
             {navLinks.map((link) => {
               const active = isActive(link.href);
+              const displayLabel =
+                activeDemo === 1 ? link.label : `${link.num} ${link.label}`;
+
               return (
                 <li key={link.href}>
                   <Link
@@ -90,7 +99,8 @@ export default function Header() {
                     onClick={closeMenu}
                     aria-current={active ? 'page' : undefined}
                   >
-                    {link.label}
+                    {activeDemo === 2 && active && <span style={{ color: 'var(--accent)' }}>■ </span>}
+                    {displayLabel}
                   </Link>
                 </li>
               );

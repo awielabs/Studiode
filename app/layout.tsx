@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
+import DemoSwitcher from '@/components/DemoSwitcher';
+import { DemoProvider } from '@/context/DemoContext';
 
 const spaceMono = Space_Mono({
   weight: ['400', '700'],
@@ -45,10 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${inter.variable}`}>
       <body>
-        <LoadingScreen />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <DemoProvider>
+          <LoadingScreen />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <DemoSwitcher />
+        </DemoProvider>
       </body>
     </html>
   );

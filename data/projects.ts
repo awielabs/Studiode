@@ -1,5 +1,7 @@
 export interface Project {
   slug: string;
+  number: string;
+  numberShort: string;
   title: string;
   subtitle?: string;
   location: string;
@@ -22,6 +24,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "project-one",
+    number: "001",
+    numberShort: "01",
     title: "Project One",
     subtitle: "Aura Residence & Reflection Pavilion",
     location: "Mumbai, India",
@@ -45,6 +49,8 @@ export const projects: Project[] = [
   },
   {
     slug: "project-two",
+    number: "002",
+    numberShort: "02",
     title: "Project Two",
     subtitle: "Terracotta Monolith Cultural Center",
     location: "Ahmedabad, India",
@@ -68,6 +74,8 @@ export const projects: Project[] = [
   },
   {
     slug: "project-three",
+    number: "003",
+    numberShort: "03",
     title: "Project Three",
     subtitle: "Courtyard & Limestone Enclosure",
     location: "Pune, India",
@@ -91,6 +99,8 @@ export const projects: Project[] = [
   },
   {
     slug: "project-four",
+    number: "004",
+    numberShort: "04",
     title: "Project Four",
     subtitle: "Habitats 04 Ecological Studio",
     location: "Bengaluru, India",
