@@ -3,7 +3,7 @@
 > **Design for People + Transformative Habitats**  
 > Contemporary Architecture · Spatial Research · Built Monograph Archive
 
-A premium minimalist architecture studio website demo featuring an interactive **Three-Design Concept Review System** built for client presentation and review.
+A premium minimalist architecture studio website demo featuring an interactive **Four-Design Concept Review System** built for client presentation and review.
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
@@ -14,15 +14,15 @@ A premium minimalist architecture studio website demo featuring an interactive *
 
 ## Overview
 
-This repository hosts the frontend demonstration for **Studio De.PTH**. It integrates **three distinct visual design directions** into a single cohesive web application. Clients can switch between all three directions in real time using a discreet switcher widget (`CONCEPT: 01 / 02 / 03`) pinned at the bottom-right corner of the viewport.
+This repository hosts the frontend demonstration for **Studio De.PTH**. It integrates **four distinct visual design directions** into a single cohesive web application. Clients can switch between all four directions in real time using a discreet switcher widget (`CONCEPT: 01 / 02 / 03 / 04`) pinned at the bottom-right corner of the viewport.
 
-All three concepts share the identical project portfolio, content, responsive framework, and strict client requirements—allowing direct aesthetic comparison during design presentations.
+All four concepts share the identical project portfolio, content, responsive framework, and strict client requirements—allowing direct aesthetic comparison during design presentations.
 
 For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_PROPOSAL.md).
 
 ---
 
-## The Three Design Directions
+## The Four Design Directions
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -34,6 +34,9 @@ For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_
 ├────────────────────────────────────────────────────────────────────────┤
 │  03: SWISS / BRUTALIST ARCHIVE                                         │
 │  Massive oversized numbers · Strict 12-col grid · Poster compositions  │
+├────────────────────────────────────────────────────────────────────────┤
+│  04: ARCHITECTURAL JOURNAL / FULL-SCREEN STORY                         │
+│  Full-screen chapters · Vertical project sequence · Magazine monograph │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -54,6 +57,12 @@ For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_
 * **Hero**: Monolithic typographic statement paired with an architectural image strictly occupying 45%–55% of the visual column.
 * **Projects Flow**: Led by commanding oversized numbers (`01`, `02`, `03`, `04`). Hovering triggers a subtle title color shift and an architectural red square indicator (`■`).
 * **Manifesto Bar**: Three-column discipline breakdown (`01.1 DISCIPLINE`, `01.2 HUMAN SCALE`, `01.3 PERMANENCE`).
+
+### 04 — Architectural Journal / Full-Screen Story
+* **Core Focus**: Editorial publication, visual chapters, narrative-driven pacing, and full-screen viewports.
+* **Full-Screen Visual Story**: Viewport-height chapter sequence (Prologue $\rightarrow$ Typographic Statement $\rightarrow$ Split Editorial Feature $\rightarrow$ Full-Screen Monograph) with a persistent vertical **Story Spine Indicator** (`01 · 02 · 03 · 04`).
+* **Vertical Editorial Sequence**: Projects are displayed not in a grid, but as continuous, full-width architectural monograph plates with subtle title offset on hover.
+* **Magazine Monograph Detail**: Project pages read like long-form journal articles with hero photographic plates, editorial narrative essays, technical specification tables, and multi-image spreads.
 
 ---
 
@@ -80,30 +89,32 @@ For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_
 studio-depth/
 ├── app/
 │   ├── layout.tsx            # Global RootLayout (wraps DemoProvider & Header)
-│   ├── page.tsx              # Home router (switches between Home01, 02, 03)
-│   ├── globals.css           # Architectural design tokens and responsive CSS
+│   ├── page.tsx              # Home router (switches between Home01, 02, 03, 04)
+│   ├── globals.css           # Architectural design tokens, responsive styles, & Demo 04 system
 │   ├── about/
-│   │   └── page.tsx          # About page router (About01, 02, 03)
+│   │   └── page.tsx          # About page router (About01, 02, 03, 04)
 │   ├── projects/
-│   │   ├── page.tsx          # Projects Archive router (Projects01, 02, 03)
+│   │   ├── page.tsx          # Projects Archive router (Projects01, 02, 03, 04)
 │   │   └── [slug]/
 │   │       └── page.tsx      # Static SSG route for individual project dossiers
 │   └── contact/
-│       └── page.tsx          # Contact router (Contact01, 02, 03)
+│       └── page.tsx          # Contact router (Contact01, 02, 03, 04)
 ├── components/
 │   ├── Header.tsx            # Sticky architectural navigation header
 │   ├── Footer.tsx            # Minimalist studio footer
 │   ├── LoadingScreen.tsx     # 2-second logo loading overlay
-│   ├── DemoSwitcher.tsx      # Fixed bottom-right concept switcher
+│   ├── DemoSwitcher.tsx      # Fixed bottom-right concept switcher (01 / 02 / 03 / 04)
 │   ├── RealMap.tsx           # Embedded interactive Google Maps component
 │   ├── ProjectCard.tsx       # Reusable project card
 │   ├── ProjectFilter.tsx     # Category filter buttons (Topology / Location)
 │   ├── SectionLabel.tsx      # Serialized section index labels
+│   ├── IndividualProjectClient.tsx # Multi-demo project detail router
 │   ├── demo01/               # Contemporary Editorial components
 │   ├── demo02/               # Architectural Exhibition Catalogue components
-│   └── demo03/               # Swiss Brutalist Archive components
+│   ├── demo03/               # Swiss Brutalist Archive components
+│   └── demo04/               # Architectural Journal / Full-Screen Story components
 ├── context/
-│   └── DemoContext.tsx       # Active concept state management (1 | 2 | 3)
+│   └── DemoContext.tsx       # Active concept state management (1 | 2 | 3 | 4)
 ├── data/
 │   └── projects.ts           # Centralized portfolio dataset
 ├── public/
@@ -111,7 +122,7 @@ studio-depth/
 │   ├── logo/                 # Studio De.PTH brand assets
 │   ├── founders/             # Principal partner portraits
 │   └── projects/             # High-resolution architectural photography
-├── DESIGN_PROPOSAL.md        # Client-facing design presentation document
+├── DESIGN_PROPOSAL.md        # Client-facing design presentation document (4 concepts)
 ├── package.json
 └── tsconfig.json
 ```
@@ -144,7 +155,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. Use the `CONCEPT: 01 / 02 / 03` switcher at the bottom-right corner to test each design system.
+Open [http://localhost:3000](http://localhost:3000) in your browser. Use the `CONCEPT: 01 / 02 / 03 / 04` switcher at the bottom-right corner to test each design system.
 
 ### Production Build
 
@@ -153,7 +164,7 @@ npm run build
 npm run start
 ```
 
-Build verifies complete TypeScript compliance and prerenders all 11 static routes.
+Build verifies complete TypeScript compliance and prerenders all static routes.
 
 ---
 

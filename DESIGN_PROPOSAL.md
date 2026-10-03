@@ -1,23 +1,23 @@
 # STUDIO DE.PTH
 ## WEBSITE DESIGN DIRECTIONS
 
-**Three Visual Design Concepts for Client Review**  
-*Document Reference: SDP-DES-2026-V1*  
+**Four Visual Design Concepts for Client Review**  
+*Document Reference: SDP-DES-2026-V2*  
 *Practice: Studio De.PTH — Design for People + Transformative Habitats*
 
 ---
 
 ### INTRODUCTION
 
-We have explored three distinct visual directions for the Studio De.PTH website. All three concepts follow the same core requirements, brand identity, and website structure. The difference lies in how the visual language, layout, typography, project presentation, and interactions are utilized.
+We have explored four distinct visual directions for the Studio De.PTH website. All four concepts follow the same core requirements, brand identity, and website structure. The difference lies in how the visual language, layout, typography, project presentation, and interactions are utilized.
 
-The purpose of this document is to allow the client to review and compare these three architectural design approaches before selecting the final visual direction for development and content integration.
+The purpose of this document is to allow the client to review and compare these four architectural design approaches before selecting the final visual direction for development and content integration.
 
 ---
 
 ### IMPORTANT NOTE: CORE CONSISTENCY
 
-All three concepts strictly preserve the studio's foundational requirements:
+All four concepts strictly preserve the studio's foundational requirements:
 
 * **Studio De.PTH Branding & Identity**: Authentically incorporates the supplied Studio De.PTH logo and primary tagline (*"Design for People + Transformative Habitats"*).
 * **Website Structure & Pages**: Home, About Us, Projects Archive, Dedicated Individual Project Pages, and Contact.
@@ -133,7 +133,7 @@ A practice that wants its digital presence to read like an architectural researc
 * **Hover Interaction**: Hovering reveals an architectural red indicator square `■` beside the project title; the image undergoes a subtle opacity shift while the number remains commanding black.
 
 #### Typography & Palette
-* The most typographically assertive of the three concepts. Oversized numerals (`01`, `02`, `03`) define the layout architecture, counterbalanced by crisp Typewriter labels.
+* The most typographically assertive concept. Oversized numerals (`01`, `02`, `03`) define the layout architecture, counterbalanced by crisp Typewriter labels.
 * Muted red is used with extreme restraint—reserved strictly for micro-indicators and selected active states.
 
 #### Best Suited For
@@ -143,24 +143,82 @@ A studio that wants an iconic, art-directed, design-forward identity that stands
 
 ---
 
-### SIDE-BY-SIDE COMPARISON
+```
+================================================================================
+04 — ARCHITECTURAL JOURNAL / FULL-SCREEN STORY
+================================================================================
+```
 
-| Dimension | Option 01: Contemporary Editorial | Option 02: Exhibition Catalogue | Option 03: Swiss / Brutalist Archive |
-| :--- | :--- | :--- | :--- |
-| **Overall Feel** | Refined & Editorial | Structured & Curatorial | Bold & Typographic |
-| **Main Focus** | Photography & Whitespace | Grid & Drawing Sheet | Typography & Scale |
-| **Layout Rhythm** | Portfolio Flow | Archive & Project Index | Architectural Presentation Sheet |
-| **Project Display** | Asymmetric Visual Cards | Interactive Table + Preview | Oversized Numbered Plates |
-| **Typography** | Elegant Sans + Mono labels | Monospace / Serialized | Bold Swiss + Monospace details |
-| **Grid System** | Editorial Fluid | Exposed Drawing Guidelines | Strict 12-Column Alignment |
-| **Primary Interaction** | Card Hover Fade & Scale | Hover Index Image Reveal | Micro-indicator Square Reveal |
-| **Visual Personality** | Polished & Prestigious | Intellectual & Archival | Conceptual & Commanding |
+> *"This direction designs the website as a digital architecture magazine and visual story, where the user moves through an editorial publication rather than browsing a conventional portfolio."*
+
+#### Visual Character
+* **Tone**: Immersive, editorial publication, cinematographic, narrative-driven, full-bleed.
+* **Atmosphere**: Translates the experience of slowly turning the pages of an oversized architectural periodical (*El Croquis*, *A+U*, *Detail Magazine*).
+
+#### Layout & Composition
+* Completely abandons typical landing page and card structures in favor of **Full-Screen Viewport Chapters** (`min-height: 85vh`–`95vh`):
+  * **CHAPTER 01**: Full-screen prologue plate with vertical story spine indicator (`01 · 02 · 03 · 04`).
+  * **CHAPTER 02**: Full-screen typographic manifesto statement (*"DESIGN FOR PEOPLE + TRANSFORMATIVE HABITATS"*).
+  * **CHAPTER 03**: Split feature spread pairing architectural rationale with high-definition photography.
+  * **CHAPTER 04**: Monographic full-screen project feature with direct article reading link.
+* **Story Spine Indicator**: A discreet vertical progress axis (`01`, `02`, `03`, `04`) affixed to the margin, tracking the visitor's reading position through the visual chapters.
+
+#### Project Presentation: Vertical Editorial Sequence
+* Does not use a conventional card grid. Projects are presented as an uninterrupted **Vertical Editorial Sequence**:
+  ```
+  01
+  AURA RESIDENCE
+  MUMBAI · 2026 · RESIDENTIAL
+  [ IMMENSE FULL-WIDTH PHOTOGRAPHY FRAME ]
+
+  02
+  TERRACOTTA MONOLITH
+  AHMEDABAD · 2025 · CULTURAL
+  [ IMMENSE FULL-WIDTH PHOTOGRAPHY FRAME ]
+  ```
+* Each project occupies a substantial portion of the viewport, with calm scroll-based transitions.
+* **Hover Interaction**: Minimalist and calm—subtle image opacity change (`opacity: 0.96`), title micro-shift (+4px), and appearance of a tiny muted-red square marker (`■`).
+
+#### About Page as an Editorial Manifesto
+* Replaces standard bio paragraphs with an architectural manifesto spread:
+  * Giant typographic headings: **DESIGN FOR PEOPLE** + **TRANSFORMATIVE HABITATS** with overlapping image and text compositions.
+  * Practice Trajectory chronology (`2019 FOUNDATION`, `2022 FIRST MONOGRAPH`, `2024 REGIONAL MERIT`, `2026 HABITAT INITIATIVE`).
+  * Asymmetric, large-format partner portraits.
+
+#### Project Detail as a Magazine Monograph
+* Structured like turning to an individual article in an architecture journal:
+  * Chapter number & article header (`VOL. 04 / ARTICLE 01`).
+  * Hero photographic plate.
+  * Editorial narrative essay.
+  * Monograph specification table (`PROGRAM`, `SCALE`, `MATERIALS`, `STATUS`).
+  * Multi-image architectural spreads and drawing plates.
+  * "NEXT ARTICLE →" footer transition.
+
+#### Best Suited For
+A practice that wants its digital presence to feel like a published physical monograph, elevating each commission into a cinematic, deeply considered spatial story.
+
+**Keywords**: *Journal · Visual Story · Full-Screen · Magazine · Narrative*
+
+---
+
+### SIDE-BY-SIDE COMPARISON OF ALL 4 DIRECTIONS
+
+| Dimension | Option 01: Contemporary Editorial | Option 02: Exhibition Catalogue | Option 03: Swiss / Brutalist Archive | Option 04: Architectural Journal |
+| :--- | :--- | :--- | :--- | :--- |
+| **Overall Feel** | Refined & Editorial | Structured & Curatorial | Bold & Typographic | Immersive & Narrative |
+| **Main Focus** | Photography & Whitespace | Grid & Drawing Sheet | Typography & Scale | Full-Screen Story & Chapters |
+| **Layout Rhythm** | Classical Portfolio Flow | Sheet Borders & Project Index | Architectural Sheet Layout | Full-Screen Viewport Chapters |
+| **Project Display** | Asymmetric Visual Cards | Interactive Table + Preview | Oversized Numbered Plates | Vertical Editorial Sequence |
+| **Story Progression** | Continuous Page Scroll | Indexed Curatorial Sheets | Strict Column Alignment | Chapter Spine Indicator (`01–04`) |
+| **Typography** | Elegant Sans + Mono labels | Monospace / Serialized | Bold Swiss + Monospace details | Editorial Display + Magazine Body |
+| **Primary Interaction**| Card Hover Fade & Scale | Hover Index Image Reveal | Micro-indicator Square Reveal | Calm Title Shift & Red Marker |
+| **Visual Personality** | Polished & Prestigious | Intellectual & Archival | Conceptual & Commanding | Cinematographic & Monographic |
 
 ---
 
 ### WHAT REMAINS CONSISTENT ACROSS ALL OPTIONS
 
-Selecting any of the three visual directions **will not alter** the underlying features or structural integrity:
+Selecting any of the four visual directions **will not alter** the underlying features or structural integrity:
 
 1. **Pages**: Home, About, Projects, Individual Project Dossiers, Contact.
 2. **Sticky Navigation**: Studio De.PTH logo pinned on the left, index navigation on the right.
@@ -174,10 +232,10 @@ Selecting any of the three visual directions **will not alter** the underlying f
 
 ### WHAT CHANGES
 
-The choice is purely an aesthetic and brand positioning decision:
-* **Visual Hierarchy**: Whether photography (01), drawing grid (02), or typography (03) leads the first impression.
-* **Project Discovery**: Whether visitors browse via editorial cards (01), a catalogue index (02), or oversized exhibition sheets (03).
-* **Brand Persona**: Polished contemporary practice (01) vs. Academic research atelier (02) vs. Avant-garde design voice (03).
+The choice is purely an aesthetic, structural, and brand positioning decision:
+* **Visual Hierarchy**: Whether photography (01), drawing grid (02), typography (03), or narrative chapters (04) leads the first impression.
+* **Project Discovery**: Whether visitors browse via editorial cards (01), a catalogue index (02), oversized exhibition sheets (03), or a vertical editorial sequence (04).
+* **Brand Persona**: Polished contemporary practice (01) vs. Academic research atelier (02) vs. Avant-garde design voice (03) vs. Digital architectural journal (04).
 
 ---
 
@@ -194,6 +252,9 @@ Which visual direction feels most aligned with the vision for Studio De.PTH?
 
 [   ]  OPTION 03: Ultra-Minimal Swiss / Brutalist Archive
        (Typography-led · Oversized Numbers · Bold · Structured)
+
+[   ]  OPTION 04: Architectural Journal / Full-Screen Story
+       (Full-Screen Chapters · Vertical Sequence · Editorial Publication)
 ```
 
 #### Client Notes & Observations:

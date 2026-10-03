@@ -1,6 +1,6 @@
 'use client';
 
-import { useDemo, DemoConcept } from '@/context/DemoContext';
+import { useDemo } from '@/context/DemoContext';
 
 export default function DemoSwitcher() {
   const { activeDemo, setActiveDemo, isTransitioning } = useDemo();
@@ -40,6 +40,16 @@ export default function DemoSwitcher() {
           title="Demo 03: Ultra-Minimal Swiss / Brutalist Architecture Archive"
         >
           03
+        </button>
+        <span className="demo-switcher-divider">/</span>
+        <button
+          type="button"
+          onClick={() => setActiveDemo(4)}
+          className={`demo-switcher-btn ${activeDemo === 4 ? 'active' : ''}`}
+          disabled={isTransitioning}
+          title="Demo 04: Architectural Journal / Full-Screen Story"
+        >
+          04
         </button>
       </div>
     </aside>

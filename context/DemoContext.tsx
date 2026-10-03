@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type DemoConcept = 1 | 2 | 3;
+export type DemoConcept = 1 | 2 | 3 | 4;
 
 interface DemoContextType {
   activeDemo: DemoConcept;
@@ -24,13 +24,13 @@ export function DemoProvider({ children }: { children: ReactNode }) {
     // Check URL search params or localStorage
     const params = new URLSearchParams(window.location.search);
     const demoParam = params.get('demo');
-    if (demoParam === '1' || demoParam === '2' || demoParam === '3') {
+    if (demoParam === '1' || demoParam === '2' || demoParam === '3' || demoParam === '4') {
       setActiveDemoState(Number(demoParam) as DemoConcept);
       return;
     }
 
     const saved = localStorage.getItem('studio_depth_demo_concept');
-    if (saved === '1' || saved === '2' || saved === '3') {
+    if (saved === '1' || saved === '2' || saved === '3' || saved === '4') {
       setActiveDemoState(Number(saved) as DemoConcept);
     }
   }, []);

@@ -42,6 +42,9 @@ export default function Header() {
           <span className="brand-title">
             STUDIO <span className="brand-title-accent">DE.</span>PTH
           </span>
+          {activeDemo === 4 && (
+            <span className="header-journal-stamp">JOURNAL VOL. 04</span>
+          )}
         </Link>
 
         {/* Desktop Navigation */}
@@ -50,7 +53,9 @@ export default function Header() {
             {navLinks.map((link) => {
               const active = isActive(link.href);
               const displayLabel =
-                activeDemo === 1 ? link.label : `${link.num} ${link.label}`;
+                activeDemo === 1 || activeDemo === 4
+                  ? link.label
+                  : `${link.num} ${link.label}`;
 
               return (
                 <li key={link.href} className="nav-item">
@@ -60,6 +65,7 @@ export default function Header() {
                     aria-current={active ? 'page' : undefined}
                   >
                     {activeDemo === 2 && active && <span className="nav-index-dot">■ </span>}
+                    {activeDemo === 4 && active && <span className="nav-journal-dot">· </span>}
                     {displayLabel}
                   </Link>
                 </li>
@@ -89,7 +95,9 @@ export default function Header() {
             {navLinks.map((link) => {
               const active = isActive(link.href);
               const displayLabel =
-                activeDemo === 1 ? link.label : `${link.num} ${link.label}`;
+                activeDemo === 1 || activeDemo === 4
+                  ? link.label
+                  : `${link.num} ${link.label}`;
 
               return (
                 <li key={link.href}>
@@ -100,6 +108,7 @@ export default function Header() {
                     aria-current={active ? 'page' : undefined}
                   >
                     {activeDemo === 2 && active && <span style={{ color: 'var(--accent)' }}>■ </span>}
+                    {activeDemo === 4 && active && <span style={{ color: 'var(--accent)' }}>· </span>}
                     {displayLabel}
                   </Link>
                 </li>
