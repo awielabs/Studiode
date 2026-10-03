@@ -3237,3 +3237,92 @@ img {
   }
 }
 
+/* ========================================================
+   REAL MAP COMPONENT STYLES
+   ======================================================== */
+.real-map-wrapper {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--border);
+  background-color: #fafafa;
+}
+
+.real-map-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--light-grey);
+}
+
+.real-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%) contrast(1.05);
+  transition: filter 400ms ease;
+}
+
+.real-map-wrapper:hover .real-map-iframe {
+  filter: grayscale(15%) contrast(1.02);
+}
+
+.real-map-meta-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.map-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.map-badge {
+  font-weight: 700;
+  color: var(--foreground);
+  text-transform: uppercase;
+}
+
+.map-red-dot {
+  color: var(--accent);
+  margin-right: 4px;
+}
+
+.map-coords {
+  color: var(--muted);
+}
+
+.map-external-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  transition: color var(--transition-subtle);
+}
+
+.map-external-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Swiss Variant */
+.real-map-swiss {
+  border: 1px solid var(--foreground);
+}
+
+.real-map-swiss .real-map-meta-strip {
+  border-top: 1px solid var(--foreground);
+}
+
+

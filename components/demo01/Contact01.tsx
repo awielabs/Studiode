@@ -1,6 +1,7 @@
 'use client';
 
 import SectionLabel from '@/components/SectionLabel';
+import RealMap from '@/components/RealMap';
 
 export default function Contact01() {
   return (
@@ -15,7 +16,7 @@ export default function Contact01() {
         </header>
 
         <div className="contact-layout-grid">
-          {/* Left Column: Email only as requested (No form) */}
+          {/* Left Column: Direct inquiries only (No interactive form) */}
           <div className="contact-info-panel">
             <div>
               <div className="typewriter-label typewriter-accent" style={{ marginBottom: '16px' }}>
@@ -45,58 +46,12 @@ export default function Contact01() {
             </div>
           </div>
 
-          {/* Right Column: Architectural Map Representation */}
+          {/* Right Column: Real Interactive Map */}
           <div>
             <div className="typewriter-label" style={{ marginBottom: '16px' }}>
               MAP LOCATION
             </div>
-            <div className="map-container" aria-label="Studio Location Map">
-              <div className="map-graphic-canvas">
-                <div className="map-grid-pattern" />
-
-                {/* Minimalist Cartographic Coordinate Markings */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '20px',
-                    left: '20px',
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.7rem',
-                    letterSpacing: '0.1em',
-                    color: 'var(--muted)',
-                  }}
-                >
-                  18°58&apos;N 72°49&apos;E
-                </div>
-
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    right: '20px',
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.7rem',
-                    letterSpacing: '0.1em',
-                    color: 'var(--muted)',
-                  }}
-                >
-                  SCALE 1:2500
-                </div>
-
-                {/* Studio Pin */}
-                <div className="map-studio-pin">
-                  <div className="pin-dot" />
-                  <div className="pin-label">● STUDIO DE.PTH</div>
-                </div>
-              </div>
-
-              <div className="map-footer-note">
-                <span className="typewriter-label">MUMBAI / INDIA</span>
-                <span className="typewriter-label" style={{ color: 'var(--muted-light)' }}>
-                  [LOCATION NOT CONFIRMED]
-                </span>
-              </div>
-            </div>
+            <RealMap variant="minimal" height="400px" />
           </div>
         </div>
       </div>

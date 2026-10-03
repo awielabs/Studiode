@@ -1,5 +1,7 @@
 'use client';
 
+import RealMap from '@/components/RealMap';
+
 export default function Contact02() {
   return (
     <div className="demo02-canvas section-padding">
@@ -63,35 +65,15 @@ export default function Contact02() {
             </div>
           </div>
 
-          {/* Right Column: Architectural Site Cartography */}
+          {/* Right Column: Real Interactive Map */}
           <div className="demo02-contact-panel">
             <div className="demo02-panel-head">
               <span className="demo02-red-mark">■</span>
-              <span>SITE CARTOGRAPHY & COORDINATES</span>
+              <span>CARTOGRAPHY & SATELLITE LOCATOR</span>
             </div>
 
             <div className="demo02-panel-content">
-              <div className="demo02-map-box">
-                <div className="demo02-map-blueprint">
-                  <div className="blueprint-crosshair" style={{ top: '30%', left: '40%' }} />
-                  <div className="blueprint-crosshair" style={{ top: '65%', left: '75%' }} />
-                  
-                  {/* Studio Pin */}
-                  <div className="blueprint-pin" style={{ top: '48%', left: '50%' }}>
-                    <div className="pin-pulse" />
-                    <div className="pin-text">■ STUDIO DE.PTH [ATELIER]</div>
-                  </div>
-
-                  {/* Corner Coordinates */}
-                  <div className="coord-nw">LAT 18°58&apos;42&quot;N</div>
-                  <div className="coord-se">LON 72°49&apos;33&quot;E</div>
-                </div>
-
-                <div className="demo02-map-footer">
-                  <span>LOCATION: MUMBAI METROPOLITAN REGION</span>
-                  <span>[PRECISE PHYSICAL ADDRESS NOT CONFIRMED]</span>
-                </div>
-              </div>
+              <RealMap variant="catalogue" height="380px" />
             </div>
           </div>
         </div>

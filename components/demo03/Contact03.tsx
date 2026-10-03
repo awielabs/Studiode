@@ -1,5 +1,7 @@
 'use client';
 
+import RealMap from '@/components/RealMap';
+
 export default function Contact03() {
   return (
     <div className="demo03-canvas section-padding">
@@ -42,24 +44,10 @@ export default function Contact03() {
             </div>
           </div>
 
-          {/* Right: Strict Rectangular Map Placeholder */}
+          {/* Right: Real Interactive Map */}
           <div className="demo03-contact-right">
-            <span className="demo03-label-tag">CARTOGRAPHIC LOCATOR</span>
-            <div className="demo03-swiss-map-box">
-              <div className="swiss-map-inner">
-                <div className="swiss-crosshair" style={{ top: '50%', left: '50%' }} />
-                <div className="swiss-map-pin">
-                  <span className="swiss-pin-dot">■</span>
-                  <span className="swiss-pin-text">STUDIO DE.PTH / MUMBAI</span>
-                </div>
-                <div className="swiss-coord-nw">18°58&apos;N / 72°49&apos;E</div>
-                <div className="swiss-coord-se">SCALE 1:5000 METRIC</div>
-              </div>
-              <div className="swiss-map-caption">
-                <span>LOCATION: MUMBAI / MAHARASHTRA / INDIA</span>
-                <span>[ADDRESS NOT YET FORMALIZED]</span>
-              </div>
-            </div>
+            <span className="demo03-label-tag" style={{ marginBottom: '14px' }}>CARTOGRAPHIC LOCATOR</span>
+            <RealMap variant="swiss" height="380px" />
           </div>
         </div>
       </div>
