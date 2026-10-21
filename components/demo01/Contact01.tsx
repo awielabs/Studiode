@@ -7,41 +7,52 @@ export default function Contact01() {
   return (
     <div className="section-padding demo01-container">
       <div className="container">
-        <header className="contact-header">
+        <header className="contact-header" style={{ marginBottom: '40px' }}>
           <SectionLabel number="01" title="COMMISSIONS & INQUIRIES" />
-          <h1 className="about-page-title">CONTACT</h1>
+          <h1 className="about-page-title">CONTACT US</h1>
           <p className="typewriter-label">
-            Dialogue on Transformative Habitats
+            Dialogue on Transformative Habitats · Direct Inquiries Only
           </p>
         </header>
 
         <div className="contact-layout-grid">
-          {/* Left Column: Direct inquiries only (No interactive form) */}
+          {/* Left Column: Direct inquiries (Strictly NO interactive form) */}
           <div className="contact-info-panel">
             <div>
               <div className="typewriter-label typewriter-accent" style={{ marginBottom: '16px' }}>
-                DIRECT INQUIRIES
+                DIRECT INQUIRIES (CLICKABLE EMAIL)
               </div>
-              <p style={{ marginBottom: '14px', fontSize: '1.05rem', color: '#555' }}>
-                For project proposals, academic discourse, or general inquiries:
+              <p style={{ marginBottom: '16px', fontSize: '1rem', color: 'var(--foreground)' }}>
+                For project commissions, collaboration proposals, or press dialogue:
               </p>
-              <div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <a
                   href="mailto:hello@studiodepth.com"
                   className="contact-email-link"
                 >
-                  hello@studiodepth.com
+                  hello@studiodepth.com →
+                </a>
+                <a
+                  href="mailto:contact@studiodepth.com"
+                  className="contact-email-link"
+                  style={{ fontSize: '1.05rem', color: 'var(--muted)' }}
+                >
+                  contact@studiodepth.com →
                 </a>
               </div>
             </div>
 
-            <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '32px' }}>
+            <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '28px' }}>
               <div className="typewriter-label" style={{ marginBottom: '12px' }}>
-                STUDIO PRESENCE
+                ATELIER LOCATION (PROVISIONAL)
               </div>
-              <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: '1.7' }}>
-                Studio De.PTH operates between physical sites and spatial research habitats.
-                Physical atelier visits are organized by prior appointment.
+              <p style={{ fontSize: '0.95rem', color: 'var(--foreground)', lineHeight: '1.7', marginBottom: '8px' }}>
+                Studio De.PTH<br />
+                South Mumbai Practice Atelier<br />
+                Mumbai, Maharashtra, India
+              </p>
+              <p className="typewriter-label" style={{ color: 'var(--accent)', fontSize: '0.72rem' }}>
+                *(Address subject to client confirmation)*
               </p>
             </div>
           </div>
@@ -49,9 +60,9 @@ export default function Contact01() {
           {/* Right Column: Real Interactive Map */}
           <div>
             <div className="typewriter-label" style={{ marginBottom: '16px' }}>
-              MAP LOCATION
+              STUDIO MAP (MUMBAI)
             </div>
-            <RealMap variant="minimal" height="400px" />
+            <RealMap variant="minimal" height="420px" />
           </div>
         </div>
       </div>

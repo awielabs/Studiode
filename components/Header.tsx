@@ -13,9 +13,11 @@ export default function Header() {
 
   const navLinks = [
     { num: '01', label: 'HOME', href: '/' },
-    { num: '02', label: 'ABOUT', href: '/about' },
+    { num: '02', label: 'ABOUT US', href: '/about' },
     { num: '03', label: 'PROJECTS', href: '/projects' },
-    { num: '04', label: 'CONTACT', href: '/contact' },
+    { num: '04', label: 'CONTACT US', href: '/contact' },
+    { num: '05', label: 'CLIENT SELL', href: '/client-sell', badge: 'SOON' },
+    { num: '06', label: 'RESIGNATION', href: '/resignation', badge: 'SOON' },
   ];
 
   const isActive = (href: string) => {
@@ -67,6 +69,7 @@ export default function Header() {
                     {activeDemo === 2 && active && <span className="nav-index-dot">■ </span>}
                     {activeDemo === 4 && active && <span className="nav-journal-dot">· </span>}
                     {displayLabel}
+                    {link.badge && <span className="nav-badge">{link.badge}</span>}
                   </Link>
                 </li>
               );
@@ -110,6 +113,7 @@ export default function Header() {
                     {activeDemo === 2 && active && <span style={{ color: 'var(--accent)' }}>■ </span>}
                     {activeDemo === 4 && active && <span style={{ color: 'var(--accent)' }}>· </span>}
                     {displayLabel}
+                    {link.badge && <span className="nav-badge">{link.badge}</span>}
                   </Link>
                 </li>
               );

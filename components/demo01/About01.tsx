@@ -8,42 +8,41 @@ export default function About01() {
     <div className="section-padding demo01-container">
       <div className="container">
         {/* Intro */}
-        <div className="about-hero-grid">
+        <div className="about-hero-grid" style={{ marginBottom: '48px' }}>
           <div>
-            <div className="typewriter-label typewriter-accent">OVERVIEW</div>
+            <div className="typewriter-label typewriter-accent">STUDIO PROFILE</div>
           </div>
           <div>
-            <h1 className="about-page-title">ABOUT</h1>
+            <h1 className="about-page-title">ABOUT US</h1>
             <div className="about-page-subtitle">
               STUDIO <span>DE.</span>PTH
             </div>
           </div>
         </div>
 
-        {/* 01 / Studio Story */}
-        <section className="two-col-layout" aria-label="Studio Story">
+        {/* 01 / About The Start Up */}
+        <section className="two-col-layout" aria-label="About the Start Up">
           <div>
-            <SectionLabel number="01" title="THE STUDIO" />
+            <SectionLabel number="01" title="ABOUT THE STARTUP" />
           </div>
           <div className="two-col-body">
             <p>
-              Studio De.PTH was established as an architecture and spatial research practice
-              committed to human-centered environments. We investigate how thoughtful
-              spatial proportion, unadorned materials, and natural light foster transformative
-              daily habitats.
+              Studio De.PTH is an emerging contemporary architectural studio and spatial research
+              practice founded with the vision to engineer human-centered, transformative habitats.
+              We question standard volumetric conventions, focusing on proportion, ambient daylight,
+              and material honesty.
             </p>
             <p>
-              Our design ethos privileges quiet permanence over fleeting trends. Every
-              commission is approached through deep listening, local climate conditions,
-              and tactile craftsmanship.
+              Operating at the intersection of climate responsiveness and minimalist permanence,
+              our work aims to enrich the daily rhythms of the people who inhabit our built spaces.
             </p>
           </div>
         </section>
 
-        {/* 02 / Founders */}
-        <section className="two-col-layout" aria-label="Founders">
+        {/* 02 / The Two Founders */}
+        <section className="two-col-layout" aria-label="The Two Founders">
           <div>
-            <SectionLabel number="02" title="FOUNDERS" />
+            <SectionLabel number="02" title="THE TWO FOUNDERS" />
           </div>
           <div className="two-col-body">
             <div className="founders-grid">
@@ -52,17 +51,20 @@ export default function About01() {
                 <div className="founder-image-wrapper">
                   <Image
                     src="/founders/founder-01.jpg"
-                    alt="Founder / Architect"
+                    alt="Founder 01 — Principal Architect"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="founder-image"
                   />
                 </div>
-                <div className="founder-name">FOUNDER NAME</div>
-                <div className="founder-role">Founder / Principal Architect</div>
+                <div className="founder-name">FOUNDER 01</div>
+                <div className="founder-role">Co-Founder / Principal Architect</div>
                 <p className="founder-bio">
-                  Architectural lead directing conceptual research, spatial planning, and construction
-                  craftsmanship. (Information placeholder to be provided by client).
+                  Leads spatial design, habitational concepts, and construction craft.
+                  <br />
+                  <span className="typewriter-accent" style={{ fontSize: '0.75rem', display: 'block', marginTop: '6px' }}>
+                    *(Detailed biographical info to be shared by client)*
+                  </span>
                 </p>
               </div>
 
@@ -71,54 +73,58 @@ export default function About01() {
                 <div className="founder-image-wrapper">
                   <Image
                     src="/founders/founder-02.jpg"
-                    alt="Founder / Architect"
+                    alt="Founder 02 — Principal Architect"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="founder-image"
                   />
                 </div>
-                <div className="founder-name">FOUNDER NAME</div>
-                <div className="founder-role">Founder / Principal Architect</div>
+                <div className="founder-name">FOUNDER 02</div>
+                <div className="founder-role">Co-Founder / Principal Architect</div>
                 <p className="founder-bio">
-                  Architectural lead focusing on environmental integration, materials research,
-                  and tectonic systems. (Information placeholder to be provided by client).
+                  Directs technical research, materiality, environmental integration, and structural systems.
+                  <br />
+                  <span className="typewriter-accent" style={{ fontSize: '0.75rem', display: 'block', marginTop: '6px' }}>
+                    *(Detailed biographical info to be shared by client)*
+                  </span>
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 03 / History */}
-        <section className="two-col-layout" aria-label="Studio History">
+        {/* 03 / History of the Startup */}
+        <section className="two-col-layout" aria-label="History of the Startup">
           <div>
-            <SectionLabel number="03" title="HISTORY" />
+            <SectionLabel number="03" title="HISTORY OF THE STARTUP" />
           </div>
           <div className="two-col-body">
             <div className="timeline-container">
               <div className="timeline-item">
                 <div className="timeline-node" />
                 <div className="timeline-year">2024</div>
-                <div className="timeline-title">Studio Founded</div>
+                <div className="timeline-title">Foundation of Studio De.PTH</div>
                 <p className="timeline-desc">
-                  Inception of Studio De.PTH with a focus on people-centric habitat research.
+                  Inception of the practice by the two founders in Mumbai, established to research
+                  transformative spatial design and material honesty.
                 </p>
               </div>
 
               <div className="timeline-item">
                 <div className="timeline-node" />
                 <div className="timeline-year">2025</div>
-                <div className="timeline-title">First Commissions</div>
+                <div className="timeline-title">Initial Commissions & Research</div>
                 <p className="timeline-desc">
-                  Realization of initial residential enclosures and cultural pavilion studies.
+                  Execution of key residential dwellings, experimental landscape pavilions, and sustainable material studies.
                 </p>
               </div>
 
               <div className="timeline-item">
                 <div className="timeline-node" />
                 <div className="timeline-year">2026</div>
-                <div className="timeline-title">Studio Expansion</div>
+                <div className="timeline-title">Practice Expansion</div>
                 <p className="timeline-desc">
-                  Broadening spatial research, regional projects, and collaborative monographs.
+                  Expanding portfolio across topologies in Western India, cultural exhibitions, and institutional collaborations.
                 </p>
               </div>
             </div>
@@ -132,9 +138,9 @@ export default function About01() {
           </div>
           <div className="two-col-body">
             <p>
-              We believe architecture is not merely about forms on the skyline, but about
-              the tactile, sensory resonance of spaces that people inhabit every day.
-              Space, light, and silence remain our primary materials.
+              Reflecting the architectural ethos of Sanjay Puri Architects and Architecture BRIO,
+              our studio works without excessive ornament or unnecessary digital effects.
+              Architecture is experienced through light, proportion, texture, and silence.
             </p>
           </div>
         </section>

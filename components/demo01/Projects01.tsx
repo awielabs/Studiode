@@ -1,15 +1,18 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { projects } from '@/data/projects';
+import { projects, Project } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
-import ProjectFilter from '@/components/ProjectFilter';
+import ProjectFilter, { HoverAnimationType } from '@/components/ProjectFilter';
 import SectionLabel from '@/components/SectionLabel';
+import ProjectDetail01 from '@/components/demo01/ProjectDetail01';
 
 export default function Projects01() {
   const [activeMode, setActiveMode] = useState<'all' | 'topology' | 'location'>('all');
   const [selectedTopology, setSelectedTopology] = useState<string>('all');
   const [selectedLocation, setSelectedLocation] = useState<string>('all');
+  const [hoverAnimation, setHoverAnimation] = useState<HoverAnimationType>('both');
+  const [isolatedProject, setIsolatedProject] = useState<Project | null>(null);
 
   const availableTopologies = useMemo(() => {
     return Array.from(new Set(projects.map((p) => p.topology)));
@@ -37,6 +40,40 @@ export default function Projects01() {
     return projects;
   }, [activeMode, selectedTopology, selectedLocation]);
 
+  // If a project was clicked, isolate and display ONLY that project's details, hiding all other projects
+  if (isolatedProject) {
+    return (
+      <div className="section-padding demo01-container">
+        <div className="container">
+          <div style={{ marginBottom: '32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <button
+              type="button"
+              onClick={() => setIsolatedProject(null)}
+              className="typewriter-label"
+              style={{
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '10px 18px',
+                border: '1px solid var(--accent)',
+                color: 'var(--accent)',
+                backgroundColor: 'transparent',
+              }}
+            >
+              ← BACK TO ALL PROJECTS (RESTORE GRID)
+            </button>
+            <span className="typewriter-label" style={{ color: 'var(--muted)' }}>
+              VIEWING INDIVIDUAL DOSSIER (OTHER PROJECTS HIDDEN)
+            </span>
+          </div>
+
+          <ProjectDetail01 project={isolatedProject} />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="section-padding demo01-container">
       <div className="container">
@@ -49,7 +86,7 @@ export default function Projects01() {
           </p>
         </div>
 
-        {/* Filter Bar */}
+        {/* Filter Bar with Herzog de Meuron toggle button & Bhosale category buttons */}
         <ProjectFilter
           activeMode={activeMode}
           onModeChange={handleModeChange}
@@ -59,6 +96,8 @@ export default function Projects01() {
           onLocationSelect={setSelectedLocation}
           availableTopologies={availableTopologies}
           availableLocations={availableLocations}
+          hoverAnimation={hoverAnimation}
+          onHoverAnimationChange={setHoverAnimation}
         />
 
         {/* Project Grid */}
@@ -90,6 +129,8 @@ export default function Projects01() {
                   index={idx}
                   spanClass={spanClass}
                   aspectClass={aspectClass}
+                  hoverAnimation={hoverAnimation}
+                  onSelectProject={(p) => setIsolatedProject(p)}
                 />
               );
             })}

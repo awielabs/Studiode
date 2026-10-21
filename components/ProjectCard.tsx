@@ -1,12 +1,17 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Project } from '@/data/projects';
+import { HoverAnimationType } from '@/components/ProjectFilter';
 
 interface ProjectCardProps {
   project: Project;
   index: number;
   spanClass?: string;
   aspectClass?: string;
+  hoverAnimation?: HoverAnimationType;
+  onSelectProject?: (project: Project) => void;
 }
 
 export default function ProjectCard({
@@ -14,13 +19,23 @@ export default function ProjectCard({
   index,
   spanClass = 'span-6',
   aspectClass = 'aspect-landscape',
+  hoverAnimation = 'both',
+  onSelectProject,
 }: ProjectCardProps) {
   const indexFormatted = String(index + 1).padStart(2, '0');
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (onSelectProject) {
+      e.preventDefault();
+      onSelectProject(project);
+    }
+  };
 
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className={`project-item ${spanClass}`}
+      onClick={handleClick}
+      className={`project-item ${spanClass} hover-anim-${hoverAnimation}`}
       id={`project-card-${project.slug}`}
     >
       <div className="project-index">{indexFormatted}</div>
@@ -32,6 +47,7 @@ export default function ProjectCard({
           sizes="(max-width: 768px) 100vw, 50vw"
           className="project-img"
         />
+        <div className="project-hover-overlay" />
       </div>
 
       <div className="project-meta">

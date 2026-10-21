@@ -97,8 +97,12 @@ studio-depth/
 │   │   ├── page.tsx          # Projects Archive router (Projects01, 02, 03, 04)
 │   │   └── [slug]/
 │   │       └── page.tsx      # Static SSG route for individual project dossiers
-│   └── contact/
-│       └── page.tsx          # Contact router (Contact01, 02, 03, 04)
+│   ├── contact/
+│   │   └── page.tsx          # Contact router (Contact01, 02, 03, 04)
+│   ├── client-sell/
+│   │   └── page.tsx          # Client Sell future module portal
+│   └── resignation/
+│       └── page.tsx          # Resignation future administrative portal
 ├── components/
 │   ├── Header.tsx            # Sticky architectural navigation header
 │   ├── Footer.tsx            # Minimalist studio footer
