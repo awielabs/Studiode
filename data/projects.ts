@@ -124,10 +124,45 @@ export const projects: Project[] = [
   },
 ];
 
+import { PROJECTS as SHIVAM_PROJECTS, Project as ShivamProject } from './shivamProjects';
+
+function mapShivamToProject(sp: ShivamProject, index: number): Project {
+  return {
+    slug: sp.slug,
+    number: String(index + 5).padStart(3, '0'),
+    numberShort: String(index + 5).padStart(2, '0'),
+    title: sp.title,
+    subtitle: sp.summary,
+    location: `${sp.location}, India`,
+    topology: sp.typology,
+    year: sp.year,
+    coverImage: sp.mainImage,
+    description: sp.description.join(' '),
+    images: sp.gallery && sp.gallery.length > 0 ? sp.gallery : [sp.mainImage],
+    details: {
+      topology: sp.typology,
+      location: `${sp.location}, India`,
+      year: sp.year,
+      scale: sp.area,
+      status: sp.status,
+    },
+  };
+}
+
 export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug);
+  const direct = projects.find((p) => p.slug === slug);
+  if (direct) return direct;
+
+  const shivamIndex = SHIVAM_PROJECTS.findIndex((p) => p.slug === slug || p.id === slug);
+  if (shivamIndex !== -1) {
+    return mapShivamToProject(SHIVAM_PROJECTS[shivamIndex], shivamIndex);
+  }
+
+  return undefined;
 }
 
 export function getAllProjectSlugs(): string[] {
-  return projects.map((p) => p.slug);
+  const studioSlugs = projects.map((p) => p.slug);
+  const shivamSlugs = SHIVAM_PROJECTS.map((p) => p.slug);
+  return Array.from(new Set([...studioSlugs, ...shivamSlugs]));
 }

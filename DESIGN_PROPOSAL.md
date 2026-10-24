@@ -1,17 +1,17 @@
 # STUDIO DE.PTH
 ## WEBSITE DESIGN DIRECTIONS
 
-**Four Visual Design Concepts for Client Review**  
-*Document Reference: SDP-DES-2026-V2*  
+**Five Visual Design Concepts for Client Review**  
+*Document Reference: SDP-DES-2026-V3*  
 *Practice: Studio De.PTH — Design for People + Transformative Habitats*
 
 ---
 
 ### INTRODUCTION
 
-We have explored four distinct visual directions for the Studio De.PTH website. All four concepts follow the same core requirements, brand identity, and website structure. The difference lies in how the visual language, layout, typography, project presentation, and interactions are utilized.
+We have explored five distinct visual directions for the Studio De.PTH website. All five concepts follow the same core requirements, brand identity, and website structure. The difference lies in how the visual language, layout, typography, project presentation, and interactions are utilized.
 
-The purpose of this document is to allow the client to review and compare these four architectural design approaches before selecting the final visual direction for development and content integration.
+The purpose of this document is to allow the client to review and compare these five architectural design approaches before selecting the final visual direction for development and content integration.
 
 ---
 
@@ -201,24 +201,46 @@ A practice that wants its digital presence to feel like a published physical mon
 
 ---
 
-### SIDE-BY-SIDE COMPARISON OF ALL 4 DIRECTIONS
+```
+================================================================================
+05 — MONOGRAPH CINEMATIC SLIDER & DEEP HABITAT ARCHIVE (DEMO BY SHIVAM)
+================================================================================
+```
 
-| Dimension | Option 01: Contemporary Editorial | Option 02: Exhibition Catalogue | Option 03: Swiss / Brutalist Archive | Option 04: Architectural Journal |
-| :--- | :--- | :--- | :--- | :--- |
-| **Overall Feel** | Refined & Editorial | Structured & Curatorial | Bold & Typographic | Immersive & Narrative |
-| **Main Focus** | Photography & Whitespace | Grid & Drawing Sheet | Typography & Scale | Full-Screen Story & Chapters |
-| **Layout Rhythm** | Classical Portfolio Flow | Sheet Borders & Project Index | Architectural Sheet Layout | Full-Screen Viewport Chapters |
-| **Project Display** | Asymmetric Visual Cards | Interactive Table + Preview | Oversized Numbered Plates | Vertical Editorial Sequence |
-| **Story Progression** | Continuous Page Scroll | Indexed Curatorial Sheets | Strict Column Alignment | Chapter Spine Indicator (`01–04`) |
-| **Typography** | Elegant Sans + Mono labels | Monospace / Serialized | Bold Swiss + Monospace details | Editorial Display + Magazine Body |
-| **Primary Interaction**| Card Hover Fade & Scale | Hover Index Image Reveal | Micro-indicator Square Reveal | Calm Title Shift & Red Marker |
-| **Visual Personality** | Polished & Prestigious | Intellectual & Archival | Conceptual & Commanding | Cinematographic & Monographic |
+> *"This direction presents Studio De.PTH through a full-screen auto-advancing project slider, isolated single-project view mode, rich founder credentials, and a startup history timeline."*
+
+#### Visual Character
+* **Tone**: Cinematic, bold, architectural-typewriter focus, deep red contrast (`#941B1B`).
+* **Atmosphere**: Evokes a prestigious architectural monograph with full-screen hero plates, technical project sheets, and historical milestones.
+
+#### Layout & Composition
+* **Home**: Full-screen auto-advancing hero slider with 7-second intervals, vignette gradient, typewriter typography, and slide counter (`01 / 04`).
+* **About Us**: 3-pillar architectural tenets, founder dossiers (`Ar. Devendra Patil` & `Ar. Priya Thapar`) with quotes, bio paragraphs, and a vertical startup chronology timeline (`2019`, `2021`, `2023`, `Present`).
+* **Projects**: Filter drawer with typology & location pills, plus isolated single-project view (`ProjectDetailView`) that isolates only the selected project.
+* **Contact**: Direct electronic inquiries desk (`connect@`, `press@`, `careers@`), representative studio address notice, and embedded cartographic map.
+
+**Keywords**: *Cinematic Slider · Fullscreen Hero · Isolated Project View · Startup Timeline · Deep Tectonics*
+
+---
+
+### SIDE-BY-SIDE COMPARISON OF ALL 5 DIRECTIONS
+
+| Dimension | Option 01: Contemporary Editorial | Option 02: Exhibition Catalogue | Option 03: Swiss / Brutalist Archive | Option 04: Architectural Journal | Option 05: Monograph Cinematic Slider |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Overall Feel** | Refined & Editorial | Structured & Curatorial | Bold & Typographic | Immersive & Narrative | Cinematic & Monographic |
+| **Main Focus** | Photography & Whitespace | Grid & Drawing Sheet | Typography & Scale | Full-Screen Story & Chapters | Fullscreen Slider & Isolated Dossier |
+| **Layout Rhythm** | Classical Portfolio Flow | Sheet Borders & Project Index | Architectural Sheet Layout | Full-Screen Viewport Chapters | Fullscreen Hero + Rich Timeline |
+| **Project Display** | Asymmetric Visual Cards | Interactive Table + Preview | Oversized Numbered Plates | Vertical Editorial Sequence | Cards + In-Place Isolated View |
+| **Story Progression** | Continuous Page Scroll | Indexed Curatorial Sheets | Strict Column Alignment | Chapter Spine Indicator (`01–04`) | Auto-advancing Carousel + Timeline |
+| **Typography** | Elegant Sans + Mono labels | Monospace / Serialized | Bold Swiss + Monospace details | Editorial Display + Magazine Body | Courier Prime Typewriter + Crimson |
+| **Primary Interaction**| Card Hover Fade & Scale | Hover Index Image Reveal | Micro-indicator Square Reveal | Calm Title Shift & Red Marker | Auto-slide + In-Place View Isolation |
+| **Visual Personality** | Polished & Prestigious | Intellectual & Archival | Conceptual & Commanding | Cinematographic & Monographic | Monograph & Chronological Depth |
 
 ---
 
 ### WHAT REMAINS CONSISTENT ACROSS ALL OPTIONS
 
-Selecting any of the four visual directions **will not alter** the underlying features or structural integrity:
+Selecting any of the five visual directions **will not alter** the underlying features or structural integrity:
 
 1. **Pages**: Home, About, Projects, Individual Project Dossiers, Contact.
 2. **Sticky Navigation**: Studio De.PTH logo pinned on the left, index navigation on the right.
@@ -233,9 +255,9 @@ Selecting any of the four visual directions **will not alter** the underlying fe
 ### WHAT CHANGES
 
 The choice is purely an aesthetic, structural, and brand positioning decision:
-* **Visual Hierarchy**: Whether photography (01), drawing grid (02), typography (03), or narrative chapters (04) leads the first impression.
-* **Project Discovery**: Whether visitors browse via editorial cards (01), a catalogue index (02), oversized exhibition sheets (03), or a vertical editorial sequence (04).
-* **Brand Persona**: Polished contemporary practice (01) vs. Academic research atelier (02) vs. Avant-garde design voice (03) vs. Digital architectural journal (04).
+* **Visual Hierarchy**: Whether photography (01), drawing grid (02), typography (03), narrative chapters (04), or fullscreen cinematic slider (05) leads the first impression.
+* **Project Discovery**: Whether visitors browse via editorial cards (01), a catalogue index (02), oversized exhibition sheets (03), a vertical editorial sequence (04), or in-place isolated view (05).
+* **Brand Persona**: Polished contemporary practice (01) vs. Academic research atelier (02) vs. Avant-garde design voice (03) vs. Digital architectural journal (04) vs. Deep tectonic monograph (05).
 
 ---
 
@@ -255,6 +277,9 @@ Which visual direction feels most aligned with the vision for Studio De.PTH?
 
 [   ]  OPTION 04: Architectural Journal / Full-Screen Story
        (Full-Screen Chapters · Vertical Sequence · Editorial Publication)
+
+[   ]  OPTION 05: Monograph Cinematic Slider & Deep Habitat Archive (Demo by Shivam)
+       (Fullscreen Auto-Slider · In-Place Project Isolation · Startup Timeline)
 ```
 
 #### Client Notes & Observations:

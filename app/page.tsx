@@ -5,6 +5,7 @@ import Home01 from '@/components/demo01/Home01';
 import Home02 from '@/components/demo02/Home02';
 import Home03 from '@/components/demo03/Home03';
 import Home04 from '@/components/demo04/Home04';
+import Home05 from '@/components/demo05/Home05';
 
 export default function HomePage() {
   const { activeDemo } = useDemo();
@@ -12,5 +13,6 @@ export default function HomePage() {
   if (activeDemo === 2) return <Home02 />;
   if (activeDemo === 3) return <Home03 />;
   if (activeDemo === 4) return <Home04 />;
+  if (activeDemo === 5) return <Home05 />;
   return <Home01 />;
 }

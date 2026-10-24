@@ -3,7 +3,7 @@
 > **Design for People + Transformative Habitats**  
 > Contemporary Architecture · Spatial Research · Built Monograph Archive
 
-A premium minimalist architecture studio website demo featuring an interactive **Four-Design Concept Review System** built for client presentation and review.
+A premium minimalist architecture studio website demo featuring an interactive **Five-Design Concept Review System** built for client presentation and review.
 
 [![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
@@ -14,15 +14,15 @@ A premium minimalist architecture studio website demo featuring an interactive *
 
 ## Overview
 
-This repository hosts the frontend demonstration for **Studio De.PTH**. It integrates **four distinct visual design directions** into a single cohesive web application. Clients can switch between all four directions in real time using a discreet switcher widget (`CONCEPT: 01 / 02 / 03 / 04`) pinned at the bottom-right corner of the viewport.
+This repository hosts the frontend demonstration for **Studio De.PTH**. It integrates **five distinct visual design directions** into a single cohesive web application. Clients can switch between all five directions in real time using a discreet switcher widget (`CONCEPT: 01 / 02 / 03 / 04 / 05`) pinned at the bottom-right corner of the viewport.
 
-All four concepts share the identical project portfolio, content, responsive framework, and strict client requirements—allowing direct aesthetic comparison during design presentations.
+All five concepts share the identical project portfolio, content, responsive framework, and strict client requirements—allowing direct aesthetic comparison during design presentations.
 
 For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_PROPOSAL.md).
 
 ---
 
-## The Four Design Directions
+## The Five Design Directions
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -37,12 +37,15 @@ For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_
 ├────────────────────────────────────────────────────────────────────────┤
 │  04: ARCHITECTURAL JOURNAL / FULL-SCREEN STORY                         │
 │  Full-screen chapters · Vertical project sequence · Magazine monograph │
+├────────────────────────────────────────────────────────────────────────┤
+│  05: MONOGRAPH CINEMATIC SLIDER & DEEP HABITAT ARCHIVE (SHIVAM DEMO)   │
+│  Fullscreen auto-slider · In-place project view isolation · Timeline   │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### 01 — Contemporary Architecture Editorial
 * **Core Focus**: Photography, atmospheric whitespace, and quiet elegance.
-* **Layout**: Narrative flow: Hero $\rightarrow$ Studio Introduction $\rightarrow$ Selected Projects $\rightarrow$ Philosophy Statement.
+* **Layout**: Narrative flow: Hero → Studio Introduction → Selected Projects → Philosophy Statement.
 * **Project Cards**: Editorial asymmetric grid with subtle 450ms opacity transition and micro-scale pop (`scale(1.025)`).
 * **Reference**: Clean architectural monographs (*Sanjay Puri Architects*, *Architecture BRIO*).
 
@@ -60,9 +63,16 @@ For the comprehensive client design document, see [DESIGN_PROPOSAL.md](./DESIGN_
 
 ### 04 — Architectural Journal / Full-Screen Story
 * **Core Focus**: Editorial publication, visual chapters, narrative-driven pacing, and full-screen viewports.
-* **Full-Screen Visual Story**: Viewport-height chapter sequence (Prologue $\rightarrow$ Typographic Statement $\rightarrow$ Split Editorial Feature $\rightarrow$ Full-Screen Monograph) with a persistent vertical **Story Spine Indicator** (`01 · 02 · 03 · 04`).
+* **Full-Screen Visual Story**: Viewport-height chapter sequence (Prologue → Typographic Statement → Split Editorial Feature → Full-Screen Monograph) with a persistent vertical **Story Spine Indicator** (`01 · 02 · 03 · 04`).
 * **Vertical Editorial Sequence**: Projects are displayed not in a grid, but as continuous, full-width architectural monograph plates with subtle title offset on hover.
 * **Magazine Monograph Detail**: Project pages read like long-form journal articles with hero photographic plates, editorial narrative essays, technical specification tables, and multi-image spreads.
+
+### 05 — Monograph Cinematic Slider & Deep Habitat Archive (Demo by Shivam)
+* **Core Focus**: Cinematic fullscreen hero project slider, in-place project view isolation, and chronological practice depth.
+* **Fullscreen Hero Slider**: Auto-advancing slides every 7 seconds with slide counter (`01 / 04`), typography vignette, and `Explore Project Details →` link.
+* **In-Place Project Isolation**: Clicking any project isolates its full detail view (`ProjectDetailView`) directly on the projects page or via direct deep link, hiding all other cards.
+* **Rich Founders & Timeline**: Includes extensive biographical portraits and quotes for Ar. Devendra Patil and Ar. Priya Thapar, alongside a vertical timeline of the startup from 2019 to Present.
+* **Cartographic Contact**: Direct electronic desks and an embedded grayscale map of Kala Ghoda, Mumbai with geographic coordinates.
 
 ---
 

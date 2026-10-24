@@ -51,6 +51,16 @@ export default function DemoSwitcher() {
         >
           04
         </button>
+        <span className="demo-switcher-divider">/</span>
+        <button
+          type="button"
+          onClick={() => setActiveDemo(5)}
+          className={`demo-switcher-btn ${activeDemo === 5 ? 'active' : ''}`}
+          disabled={isTransitioning}
+          title="Demo 05: Monograph Cinematic Slider & Deep Habitat Archive (Shivam Demo)"
+        >
+          05
+        </button>
       </div>
     </aside>
   );
