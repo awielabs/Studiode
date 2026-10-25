@@ -43,34 +43,7 @@ function ProjectsFinalContent() {
   });
 
   return (
-    <div style={{ backgroundColor: '#ffffff', minHeight: '80vh', paddingBottom: '6rem' }}>
-      {/* Page Title: "Projects" */}
-      {!activeProject && (
-        <section
-          style={{
-            borderBottom: '1px solid #ebebeb',
-            padding: '3rem 0 2rem 0',
-            backgroundColor: '#ffffff',
-            marginBottom: '2rem',
-          }}
-        >
-          <div className="container">
-            <h1
-              style={{
-                fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
-                fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
-                fontWeight: 700,
-                color: '#111111',
-                margin: 0,
-                letterSpacing: '0.01em',
-              }}
-            >
-              Projects
-            </h1>
-          </div>
-        </section>
-      )}
-
+    <div style={{ backgroundColor: '#ffffff', minHeight: '80vh', paddingTop: '2.5rem', paddingBottom: '6rem' }}>
       <div className="container">
         {/* Isolated Project Detail View or Grid */}
         {activeProject ? (
