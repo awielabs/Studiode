@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 export default function AboutFinal() {
   return (
-    <div className="demo02-canvas section-padding" style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '6rem' }}>
+    <div className="demo02-canvas" style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingTop: '2.5rem', paddingBottom: '6rem' }}>
       <div className="container">
         {/* 1. THE FOUNDERS (Reordered to first) */}
-        <section id="the-founders" className="demo02-dossier-row" style={{ paddingTop: '2rem' }}>
+        <section id="the-founders" className="demo02-dossier-row" style={{ borderTop: 'none', paddingTop: 0, marginTop: 0 }}>
           <div className="demo02-dossier-left">
             <span className="demo02-dossier-num" style={{ color: '#941B1B' }}>01</span>
             <span className="demo02-dossier-tag">THE FOUNDERS</span>
