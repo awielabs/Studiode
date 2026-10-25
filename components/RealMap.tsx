@@ -25,7 +25,7 @@ export default function RealMap({ variant = 'minimal', height = '420px' }: RealM
       <div className="real-map-meta-strip">
         <div className="map-meta-left">
           <span className="map-badge">
-            <span className="map-red-dot">●</span> STUDIO De.PTH / MUMBAI
+            <span className="map-red-dot">●</span> STUDIO D<span className="brand-e">e</span>.PTH / MUMBAI
           </span>
           <span className="map-coords">18°58&apos;42&quot;N 72°49&apos;33&quot;E</span>
         </div>

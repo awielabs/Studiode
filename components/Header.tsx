@@ -50,7 +50,7 @@ export default function Header() {
                 style={{ height: '50px', width: 'auto', maxHeight: '54px' }}
               />
               <span className="brand-title" style={{ fontSize: '1.22rem', letterSpacing: '0.12em' }}>
-                STUDIO <span style={{ color: '#941B1B' }}>De.</span>PTH
+                STUDIO <span style={{ color: '#941B1B' }}>D<span className="brand-e">e</span>.</span>PTH
               </span>
             </>
           ) : (
@@ -65,11 +65,11 @@ export default function Header() {
               />
               {activeDemo === 5 ? (
                 <span className="brand-title">
-                  STUDIO <span style={{ color: '#941B1B' }}>De.PTH</span>
+                  STUDIO <span style={{ color: '#941B1B' }}>D<span className="brand-e">e</span>.PTH</span>
                 </span>
               ) : (
                 <span className="brand-title">
-                  STUDIO <span className="brand-title-accent">DE.</span>PTH
+                  STUDIO <span className="brand-title-accent">D<span className="brand-e">e</span>.</span>PTH
                 </span>
               )}
               {activeDemo === 4 && (

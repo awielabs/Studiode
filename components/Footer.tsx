@@ -47,7 +47,7 @@ export default function Footer() {
                     color: '#111111',
                   }}
                 >
-                  STUDIO <span style={{ color: '#941B1B' }}>De.PTH</span>
+                  STUDIO <span style={{ color: '#941B1B' }}>D<span className="brand-e">e</span>.PTH</span>
                 </div>
               </div>
 
@@ -284,7 +284,7 @@ export default function Footer() {
         <div className="footer-top">
           <div>
             <div className="footer-brand-title">
-              STUDIO <span>DE.</span>PTH
+              STUDIO <span>D<span className="brand-e">e</span>.</span>PTH
             </div>
             <p className="footer-tagline">
               Design for People + Transformative Habitats

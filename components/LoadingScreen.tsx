@@ -102,7 +102,7 @@ export default function LoadingScreen() {
                 fontWeight: 700,
               }}
             >
-              STUDIO <span style={{ color: '#941B1B' }}>De.</span>PTH
+              STUDIO <span style={{ color: '#941B1B' }}>D<span className="brand-e">e</span>.</span>PTH
             </div>
             {/* Bottom text removed for final concept to make more space for logo */}
           </>
@@ -117,7 +117,7 @@ export default function LoadingScreen() {
               className="loading-logo-img"
             />
             <div className="loading-title">
-              Studio <span>De.</span>PTH
+              STUDIO <span>D<span className="brand-e">e</span>.</span>PTH
             </div>
             <div className="loading-tagline">
               Design for People + Transformative Habitats

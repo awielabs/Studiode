@@ -195,6 +195,14 @@ img {
   color: var(--accent);
 }
 
+.brand-e {
+  text-transform: lowercase !important;
+  font-size: 0.82em;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
