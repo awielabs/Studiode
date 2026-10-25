@@ -61,11 +61,11 @@ export const PROJECTS: Project[] = [
       'Continuous linear reflection pool for passive microclimate cooling',
       'Acoustically isolated subterranean gallery spaces'
     ],
-    mainImage: '/images/hero-museum-mumbai.jpg',
+    mainImage: '/projects/project-borivali-station.jpg',
     gallery: [
-      '/images/hero-museum-mumbai.jpg',
-      '/images/cultural-arts-pune.jpg',
-      '/images/residential-villa-alibaug.jpg'
+      '/projects/project-borivali-station.jpg',
+      '/projects/project-public-plaza.jpg',
+      '/projects/project-swing-pavilion.jpg'
     ],
     drawings: [
       { type: 'Ground Level Plan (1:200)', caption: 'Calibrated circulation spine connecting outdoor reflecting pools to gallery volumes' },
@@ -96,11 +96,11 @@ export const PROJECTS: Project[] = [
       'Integrated natural pool bio-filtration system',
       'Cross-ventilation layout designed for monsoon resilience'
     ],
-    mainImage: '/images/residential-villa-alibaug.jpg',
+    mainImage: '/projects/project-running-track.jpg',
     gallery: [
-      '/images/residential-villa-alibaug.jpg',
-      '/images/hospitality-resort-goa.jpg',
-      '/images/hero-museum-mumbai.jpg'
+      '/projects/project-running-track.jpg',
+      '/projects/project-swing-pavilion.jpg',
+      '/projects/project-public-plaza.jpg'
     ],
     drawings: [
       { type: 'Site & Master Layout Plan', caption: 'Preservation of 100% existing mature coconut palms through micro-sited pavillion modules' },
@@ -130,11 +130,11 @@ export const PROJECTS: Project[] = [
       '40m linear reflection pool serving as visual and microclimatic spine',
       'Passive shading reducing active mechanical air cooling requirements by 42%'
     ],
-    mainImage: '/images/hospitality-resort-goa.jpg',
+    mainImage: '/projects/project-public-plaza.jpg',
     gallery: [
-      '/images/hospitality-resort-goa.jpg',
-      '/images/hero-museum-mumbai.jpg',
-      '/images/residential-villa-alibaug.jpg'
+      '/projects/project-public-plaza.jpg',
+      '/projects/project-borivali-station.jpg',
+      '/projects/project-monument-canopy.jpg'
     ],
     drawings: [
       { type: 'Resort Master Plan', caption: 'Low-density cluster morphology harmonized with native coconut groves and water channels' },
@@ -164,11 +164,11 @@ export const PROJECTS: Project[] = [
       'Permeable stone paving for zero-runoff stormwater management',
       'Public open-air amphitheater integrated into the entrance court'
     ],
-    mainImage: '/images/cultural-arts-pune.jpg',
+    mainImage: '/projects/project-monument-canopy.jpg',
     gallery: [
-      '/images/cultural-arts-pune.jpg',
-      '/images/hero-museum-mumbai.jpg',
-      '/images/residential-villa-alibaug.jpg'
+      '/projects/project-monument-canopy.jpg',
+      '/projects/project-public-plaza.jpg',
+      '/projects/project-running-track.jpg'
     ],
     drawings: [
       { type: 'Roof & Daylight Capture Plan', caption: 'Calculated geometric roof scoops directing 100% diffuse natural light into galleries' },
@@ -198,10 +198,11 @@ export const PROJECTS: Project[] = [
       'Interdisciplinary collaboration hubs between lecture zones',
       'GRIHA 5-Star and IGBC Platinum sustainability ratings'
     ],
-    mainImage: '/images/hero-museum-mumbai.jpg',
+    mainImage: '/projects/project-swing-pavilion.jpg',
     gallery: [
-      '/images/hero-museum-mumbai.jpg',
-      '/images/cultural-arts-pune.jpg'
+      '/projects/project-swing-pavilion.jpg',
+      '/projects/project-borivali-station.jpg',
+      '/projects/project-running-track.jpg'
     ],
     drawings: [
       { type: 'Comprehensive Campus Plan', caption: 'Zoned acoustic clustering separating lab research wings from public auditorium' },
@@ -231,10 +232,11 @@ export const PROJECTS: Project[] = [
       'Exposed post-tensioned slab construction maximizing column-free spatial flexibility',
       'Net-positive rooftop solar photovoltaic array'
     ],
-    mainImage: '/images/cultural-arts-pune.jpg',
+    mainImage: '/projects/project-borivali-station.jpg',
     gallery: [
-      '/images/cultural-arts-pune.jpg',
-      '/images/hero-museum-mumbai.jpg'
+      '/projects/project-borivali-station.jpg',
+      '/projects/project-monument-canopy.jpg',
+      '/projects/project-public-plaza.jpg'
     ],
     drawings: [
       { type: 'Typical Floor Column Grid', caption: '12m x 12m structural bay allowing fluid open workspace reorganization' },
@@ -264,10 +266,11 @@ export const PROJECTS: Project[] = [
       'Deep verandas creating transitional indoor-outdoor living rooms',
       'Geothermal earth-tube cooling for ground level suites'
     ],
-    mainImage: '/images/residential-villa-alibaug.jpg',
+    mainImage: '/projects/project-running-track.jpg',
     gallery: [
-      '/images/residential-villa-alibaug.jpg',
-      '/images/hospitality-resort-goa.jpg'
+      '/projects/project-running-track.jpg',
+      '/projects/project-swing-pavilion.jpg',
+      '/projects/project-borivali-station.jpg'
     ],
     drawings: [
       { type: 'Courtyard Plan View', caption: 'Axial view lines connecting entry foyer through central water court to private garden' },
@@ -297,10 +300,11 @@ export const PROJECTS: Project[] = [
       'Museum-grade 98 CRI concealed architectural lighting system',
       'Custom acoustic plaster ceiling absorbing reverberant sound'
     ],
-    mainImage: '/images/hero-museum-mumbai.jpg',
+    mainImage: '/projects/project-public-plaza.jpg',
     gallery: [
-      '/images/hero-museum-mumbai.jpg',
-      '/images/cultural-arts-pune.jpg'
+      '/projects/project-public-plaza.jpg',
+      '/projects/project-monument-canopy.jpg',
+      '/projects/project-swing-pavilion.jpg'
     ],
     drawings: [
       { type: 'Interior Furniture & Lighting Layout', caption: 'Precision art hanging alignment and recessed fixture schedule' },
@@ -330,10 +334,11 @@ export const PROJECTS: Project[] = [
       '100% off-grid solar and micro-hydro generation',
       'Natural reed-bed sewage phytoremediation system'
     ],
-    mainImage: '/images/hospitality-resort-goa.jpg',
+    mainImage: '/projects/project-swing-pavilion.jpg',
     gallery: [
-      '/images/hospitality-resort-goa.jpg',
-      '/images/residential-villa-alibaug.jpg'
+      '/projects/project-swing-pavilion.jpg',
+      '/projects/project-running-track.jpg',
+      '/projects/project-borivali-station.jpg'
     ],
     drawings: [
       { type: 'Tree Canopy Elevation', caption: 'Individual lodge heights modulated to clear mature banyan and teak canopies' },
