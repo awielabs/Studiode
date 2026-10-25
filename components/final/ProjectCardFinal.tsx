@@ -21,8 +21,8 @@ export default function ProjectCardFinal({ project, onSelect }: ProjectCardFinal
         cursor: 'pointer',
         backgroundColor: '#ffffff',
         border: '1px solid',
-        borderColor: isHovered ? '#d4d4d4' : '#f0f0f0', // Lighter border
-        opacity: isHovered ? 0.88 : 1, // Lower opacity when hover
+        borderColor: isHovered ? '#111111' : '#e5e5e5', // Darker border on hover
+        opacity: 1,
         transform: isHovered
           ? 'translate3d(0, -8px, 0) scale(1.018)'
           : 'translate3d(0, 0, 0) scale(1)', // Kept current animation
@@ -30,8 +30,8 @@ export default function ProjectCardFinal({ project, onSelect }: ProjectCardFinal
           ? '0 20px 40px -12px rgba(0, 0, 0, 0.08)'
           : '0 2px 6px rgba(0, 0, 0, 0.015)',
         transition:
-          'transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, opacity 0.3s ease',
-        willChange: 'transform, box-shadow, opacity',
+          'transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease',
+        willChange: 'transform, box-shadow',
         backfaceVisibility: 'hidden',
         display: 'flex',
         flexDirection: 'column',
@@ -71,7 +71,7 @@ export default function ProjectCardFinal({ project, onSelect }: ProjectCardFinal
           priority={false}
         />
 
-        {/* Hover Button: Changed from "View Project" to "Detail" */}
+        {/* Hover Button: Changes to "View Project →" when hovered */}
         <div
           style={{
             position: 'absolute',
@@ -89,7 +89,7 @@ export default function ProjectCardFinal({ project, onSelect }: ProjectCardFinal
             transform: isHovered ? 'translateY(0)' : 'translateY(2px)',
           }}
         >
-          {isHovered ? 'Detail →' : 'Detail'}
+          {isHovered ? 'View Project →' : 'Detail'}
         </div>
       </div>
 
