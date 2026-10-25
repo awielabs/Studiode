@@ -15,7 +15,7 @@ export default function ContactFinal() {
       }}
     >
       <div className="container">
-        {/* Header: Changed to Let’s Talk Degin (with clean, modern typography) */}
+        {/* Header: Let’s Talk Design (with clean, modern typography) */}
         <div
           style={{
             marginBottom: '3rem',
@@ -33,7 +33,7 @@ export default function ContactFinal() {
               margin: '0 0 0.5rem 0',
             }}
           >
-            Let’s Talk Degin
+            Let’s Talk Design
           </h1>
           <p
             style={{
