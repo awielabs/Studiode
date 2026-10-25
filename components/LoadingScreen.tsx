@@ -79,10 +79,10 @@ export default function LoadingScreen() {
         {activeDemo === 'final' ? (
           <>
             <Image
-              src="/logo/studio-depth-logo-trimmed.png"
+              src="/logo/studio-depth-final-logo.jpg"
               alt="Studio De.PTH"
               width={260}
-              height={208}
+              height={160}
               priority
               className="loading-logo-img loading-logo-img-final"
               style={{
@@ -102,7 +102,7 @@ export default function LoadingScreen() {
                 fontWeight: 700,
               }}
             >
-              Studio <span style={{ color: '#941B1B' }}>De.</span>PTH
+              STUDIO <span style={{ color: '#941B1B' }}>De.</span>PTH
             </div>
             {/* Bottom text removed for final concept to make more space for logo */}
           </>

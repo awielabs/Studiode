@@ -1,4 +1,4 @@
-# STUDIO DE.PTH
+# STUDIO De.PTH
 
 > **Design for People + Transformative Habitats**  
 > Contemporary Architecture · Spatial Research · Built Monograph Archive

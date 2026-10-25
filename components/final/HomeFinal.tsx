@@ -207,7 +207,7 @@ export default function HomeFinal() {
                   color: '#111111',
                 }}
               >
-                STUDIO <span style={{ color: '#941B1B' }}>De.PTH</span>
+                STUDIO <span style={{ color: '#941B1B' }}>De.</span>PTH
               </div>
               <div
                 style={{

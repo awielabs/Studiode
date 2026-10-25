@@ -1,4 +1,4 @@
-# STUDIO DE.PTH
+# STUDIO De.PTH
 ## WEBSITE DESIGN DIRECTIONS
 
 **Five Visual Design Concepts for Client Review**  

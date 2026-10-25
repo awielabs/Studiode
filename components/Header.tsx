@@ -41,10 +41,10 @@ export default function Header() {
           {activeDemo === 'final' ? (
             <>
               <Image
-                src="/logo/studio-depth-logo-trimmed.png"
+                src="/logo/studio-depth-final-logo.jpg"
                 alt="Studio De.PTH"
-                width={72}
-                height={58}
+                width={76}
+                height={50}
                 priority
                 className="brand-logo-img brand-logo-img-final"
                 style={{ height: '50px', width: 'auto', maxHeight: '54px' }}
