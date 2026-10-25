@@ -105,32 +105,6 @@ export default function ContactFinal() {
                 hello@studiodepth.com
               </a>
             </div>
-
-            {/* Atelier Specification Details */}
-            <div
-              style={{
-                borderTop: '1px solid #eeeeee',
-                paddingTop: '1.5rem',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-                fontFamily: "var(--font-mono, 'Space Mono', monospace)",
-                fontSize: '0.8rem',
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #f7f7f7', paddingBottom: '0.6rem' }}>
-                <span style={{ color: '#888888', textTransform: 'uppercase' }}>Atelier Location</span>
-                <span style={{ color: '#111111', fontWeight: 600 }}>Mumbai, Maharashtra, India</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #f7f7f7', paddingBottom: '0.6rem' }}>
-                <span style={{ color: '#888888', textTransform: 'uppercase' }}>Consultations</span>
-                <span style={{ color: '#111111', fontWeight: 600 }}>By Advance Appointment</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #f7f7f7', paddingBottom: '0.6rem' }}>
-                <span style={{ color: '#888888', textTransform: 'uppercase' }}>Typologies</span>
-                <span style={{ color: '#111111', fontWeight: 600 }}>Cultural, Residential, Hospitality</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Interactive Map */}
