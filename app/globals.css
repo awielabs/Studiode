@@ -4825,6 +4825,234 @@ img {
   }
 }
 
+/* ==========================================================================
+   CLIENT TRIAL SECTIONS ACROSS CONCEPTS 02, 03, 04
+   ========================================================================== */
+
+/* Demo 02 Client Trial Exhibition Sheet */
+.demo02-trial-sheet {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.demo02-trial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 28px;
+}
+
+.demo02-trial-card {
+  border: 1px solid var(--border);
+  background-color: #fafafa;
+  padding: 12px;
+  cursor: pointer;
+  transition: border-color var(--transition-subtle), transform var(--transition-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.demo02-trial-card:hover {
+  border-color: var(--foreground);
+  transform: translateY(-2px);
+}
+
+.demo02-trial-card.span-12 {
+  grid-column: span 12;
+}
+
+.demo02-trial-card.span-7 {
+  grid-column: span 7;
+}
+
+.demo02-trial-card.span-6 {
+  grid-column: span 6;
+}
+
+.demo02-trial-card.span-5 {
+  grid-column: span 5;
+}
+
+.demo02-trial-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+}
+
+.demo02-trial-frame.aspect-wide {
+  height: 480px;
+}
+
+.demo02-trial-frame.aspect-landscape {
+  height: 340px;
+}
+
+.demo02-trial-frame.aspect-square {
+  height: 340px;
+}
+
+.demo02-trial-meta {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.demo02-trial-meta .trial-title {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.demo02-trial-meta .trial-loc {
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .demo02-trial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .demo02-trial-card.span-12,
+  .demo02-trial-card.span-7,
+  .demo02-trial-card.span-6,
+  .demo02-trial-card.span-5 {
+    grid-column: span 1 / span 1 !important;
+  }
+  .demo02-trial-frame.aspect-wide {
+    height: 300px;
+  }
+  .demo02-trial-frame.aspect-landscape,
+  .demo02-trial-frame.aspect-square {
+    height: 240px;
+  }
+}
+
+/* Demo 03 Swiss In-Situ Field Archive */
+.demo03-trial-section {
+  padding-top: 70px;
+  margin-top: 70px;
+  border-top: 2px solid var(--foreground);
+}
+
+.demo03-trial-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+/* Demo 04 Chapter 05: In-Situ Field Dispatches */
+.demo04-dispatches-chapter {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  border-top: 1px solid var(--border-light);
+  background-color: #ffffff;
+}
+
+.demo04-dispatches-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 36px;
+  margin-top: 48px;
+}
+
+.demo04-dispatch-card {
+  border: 1px solid var(--border-light);
+  background-color: #fafafa;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform var(--transition-subtle), border-color var(--transition-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.demo04-dispatch-card:hover {
+  border-color: var(--foreground);
+  transform: translateY(-2px);
+}
+
+.demo04-dispatch-card.span-12 {
+  grid-column: span 12;
+}
+
+.demo04-dispatch-card.span-7 {
+  grid-column: span 7;
+}
+
+.demo04-dispatch-card.span-6 {
+  grid-column: span 6;
+}
+
+.demo04-dispatch-card.span-5 {
+  grid-column: span 5;
+}
+
+.demo04-dispatch-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+}
+
+.demo04-dispatch-frame.aspect-wide {
+  height: 500px;
+}
+
+.demo04-dispatch-frame.aspect-landscape {
+  height: 360px;
+}
+
+.demo04-dispatch-frame.aspect-square {
+  height: 360px;
+}
+
+.demo04-dispatch-meta {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demo04-dispatch-headline {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--foreground);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .demo04-dispatches-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .demo04-dispatch-card.span-12,
+  .demo04-dispatch-card.span-7,
+  .demo04-dispatch-card.span-6,
+  .demo04-dispatch-card.span-5 {
+    grid-column: span 1 / span 1 !important;
+  }
+  .demo04-dispatch-frame.aspect-wide {
+    height: 320px;
+  }
+  .demo04-dispatch-frame.aspect-landscape,
+  .demo04-dispatch-frame.aspect-square {
+    height: 250px;
+  }
+}
+
+
 
 
 

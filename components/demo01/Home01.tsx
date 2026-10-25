@@ -3,94 +3,13 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
+import { projects, clientTrialWorks, ClientTrialWork } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
 import SectionLabel from '@/components/SectionLabel';
 
-interface ClientTrialItem {
-  id: string;
-  number: string;
-  title: string;
-  category: string;
-  location: string;
-  year: string;
-  image: string;
-  description: string;
-  aspectClass: string;
-  spanClass: string;
-}
-
-const clientTrialWorks: ClientTrialItem[] = [
-  {
-    id: 'trial-05',
-    number: '01',
-    title: 'BORIVALI STATION CIVIC PLAZA',
-    category: 'TRANSIT INFRASTRUCTURE / PUBLIC REALM',
-    location: 'BORIVALI, MUMBAI',
-    year: '2026',
-    image: '/client-trial/client-05-borivali-station.jpg',
-    description:
-      'Arrival forecourt and pedestrian promenade featuring continuous embedded curvilinear ground illumination ribbons, rhythmic palm colonnades, and modular stone paving.',
-    aspectClass: 'aspect-wide',
-    spanClass: 'span-12',
-  },
-  {
-    id: 'trial-01',
-    number: '02',
-    title: 'URBAN SWING / SPATIAL PAUSE',
-    category: 'MICRO-HABITAT / STREET FURNITURE',
-    location: 'SOUTH MUMBAI',
-    year: '2025',
-    image: '/client-trial/client-01-urban-swing.png',
-    description:
-      'Minimalist kinetic steel canopy structure framing human respite, contemplation, and spontaneous interaction along dense urban vehicular transit corridors.',
-    aspectClass: 'aspect-landscape',
-    spanClass: 'span-7',
-  },
-  {
-    id: 'trial-02',
-    number: '03',
-    title: 'CIVIC COURTYARD & MODULAR SETTEES',
-    category: 'LANDSCAPE COMMONS / PUBLIC SEATING',
-    location: 'MUMBAI METROPOLITAN',
-    year: '2025',
-    image: '/client-trial/client-02-civic-plaza.png',
-    description:
-      'Curvilinear cast stone seating landscape nestled beneath preserved canopy trees, cultivating community pause and unprogrammed social gathering.',
-    aspectClass: 'aspect-square',
-    spanClass: 'span-5',
-  },
-  {
-    id: 'trial-04',
-    number: '04',
-    title: 'RECREATIONAL PARK CONCOURSE',
-    category: 'PUBLIC WELLNESS / URBAN GREEN SPINE',
-    location: 'SUBURBAN MUMBAI',
-    year: '2025',
-    image: '/client-trial/client-04-public-track.png',
-    description:
-      'Continuous curved athletic promenade and jogging circuit interwoven through public park vegetation, balancing community physical wellness with quiet landscape vistas.',
-    aspectClass: 'aspect-landscape',
-    spanClass: 'span-6',
-  },
-  {
-    id: 'trial-03',
-    number: '05',
-    title: 'CIVIC MEMORIAL & BOTANICAL PLINTH',
-    category: 'CIVIC INSTALLATION / MONUMENT COMMONS',
-    location: 'MAHARASHTRA',
-    year: '2024',
-    image: '/client-trial/client-03-memorial-plinth.jpg',
-    description:
-      'Elevated ceremonial pavilion and concentric botanical landscape plinth with calibrated night illumination highlighting historical civic installation.',
-    aspectClass: 'aspect-landscape',
-    spanClass: 'span-6',
-  },
-];
-
 export default function Home01() {
   const featuredProjects = projects.slice(0, 4);
-  const [selectedTrialItem, setSelectedTrialItem] = useState<ClientTrialItem | null>(null);
+  const [selectedTrialItem, setSelectedTrialItem] = useState<ClientTrialWork | null>(null);
 
   return (
     <div className="demo01-container">
