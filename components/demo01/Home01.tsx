@@ -1,13 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
+import { projects, clientTrialWorks, ClientTrialWork } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
 import SectionLabel from '@/components/SectionLabel';
 
 export default function Home01() {
   const featuredProjects = projects.slice(0, 4);
+  const [selectedTrialItem, setSelectedTrialItem] = useState<ClientTrialWork | null>(null);
 
   return (
     <div className="demo01-container">
@@ -16,8 +18,8 @@ export default function Home01() {
         <div className="container">
           <div className="hero-media-wrapper">
             <Image
-              src="/hero.jpg"
-              alt="Studio De.PTH Architecture Work"
+              src="/client-trial/client-05-borivali-station.jpg"
+              alt="Studio De.PTH Realized Architecture — Borivali Station Civic Plaza"
               fill
               priority
               sizes="100vw"
@@ -26,8 +28,16 @@ export default function Home01() {
           </div>
 
           <div className="hero-caption-bar">
-            <div className="hero-caption-title">
-              STUDIO <span>DE.</span>PTH
+            <div>
+              <div className="hero-caption-title">
+                STUDIO <span>DE.</span>PTH
+              </div>
+              <div
+                className="typewriter-label typewriter-accent"
+                style={{ fontSize: '0.72rem', marginTop: '6px' }}
+              >
+                ● CLIENT TRIAL PHOTOGRAPHY · BORIVALI STATION CIVIC PLAZA
+              </div>
             </div>
             <div className="hero-caption-tagline">
               Design for People + Transformative Habitats
@@ -48,7 +58,7 @@ export default function Home01() {
                 with purpose.
               </h1>
               <p className="intro-body">
-                Studio De.PTH explores architecture, spatial design and transformative habitats
+                Studio De.PTH explores architecture, spatial design, and transformative habitats
                 through a people-focused approach. Rooted in contextual materiality, climate
                 responsiveness, and architectural restraint, our work cultivates quiet spaces
                 that enrich everyday life.
@@ -71,11 +81,101 @@ export default function Home01() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
+      {/* 02 / Client Trial In-Situ Photography Showcase */}
+      <section
+        className="section-padding client-trial-section"
+        aria-label="Client Trial Photography In Situ"
+      >
+        <div className="container">
+          <div className="client-trial-header">
+            <div>
+              <SectionLabel number="02" title="CLIENT TRIAL ARCHIVE" />
+              <h2 className="client-trial-heading">
+                REALIZED HABITATS <br />
+                <span>IN SITU (MUMBAI)</span>
+              </h2>
+            </div>
+            <div className="client-trial-meta-box">
+              <div className="typewriter-label typewriter-accent">
+                ● 05 CLIENT TRIAL PHOTOGRAPHS
+              </div>
+              <p
+                className="typewriter-label"
+                style={{ marginTop: '8px', color: 'var(--muted)', lineHeight: '1.7' }}
+              >
+                Field documentation from Studio De.PTH commissions exploring human pause,
+                civic concourses, and curvilinear public illumination across Mumbai.
+              </p>
+            </div>
+          </div>
+
+          <div className="client-trial-grid">
+            {clientTrialWorks.map((item) => (
+              <article
+                key={item.id}
+                className={`client-trial-card ${item.spanClass}`}
+                onClick={() => setSelectedTrialItem(item)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedTrialItem(item);
+                  }
+                }}
+                aria-label={`View enlarged photograph of ${item.title}`}
+              >
+                <div className="client-trial-badge">
+                  <span>
+                    <span className="active-marker">■ </span>
+                    {item.number} / {item.category}
+                  </span>
+                  <span>{item.year}</span>
+                </div>
+
+                <div className={`client-trial-img-box ${item.aspectClass}`}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 80vw"
+                    className="client-trial-img"
+                  />
+                </div>
+
+                <div className="client-trial-info">
+                  <div className="client-trial-title">
+                    <span>{item.title}</span>
+                    <span
+                      className="typewriter-label"
+                      style={{ fontSize: '0.75rem', color: 'var(--muted)' }}
+                    >
+                      {item.location}
+                    </span>
+                  </div>
+                  <p className="client-trial-desc">{item.description}</p>
+                  <div className="client-trial-expand-tag">
+                    [+] CLICK TO EXPAND HIGH-RES PHOTOGRAPH ↗
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 03 / Selected Architectural Projects Section */}
       <section className="section-padding" aria-label="Featured Projects">
         <div className="container">
-          <div style={{ marginBottom: '48px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-            <SectionLabel number="02" title="SELECTED PROJECTS" />
+          <div
+            style={{
+              marginBottom: '48px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-end',
+            }}
+          >
+            <SectionLabel number="03" title="SELECTED PROJECTS" />
             <Link
               href="/projects"
               className="typewriter-label"
@@ -136,6 +236,62 @@ export default function Home01() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal for Enlarged Client Trial Photography */}
+      {selectedTrialItem && (
+        <div
+          className="client-trial-modal-overlay"
+          onClick={() => setSelectedTrialItem(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="client-trial-modal-box"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="client-trial-modal-close-btn"
+              onClick={() => setSelectedTrialItem(null)}
+              aria-label="Close enlarged view"
+            >
+              [✕ CLOSE]
+            </button>
+
+            <div>
+              <div className="typewriter-label typewriter-accent" style={{ marginBottom: '4px' }}>
+                CLIENT TRIAL PHOTOGRAPH #{selectedTrialItem.number} · {selectedTrialItem.year}
+              </div>
+              <h3
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '1.2rem',
+                  letterSpacing: '0.06em',
+                }}
+              >
+                {selectedTrialItem.title}
+              </h3>
+              <div className="typewriter-label" style={{ color: 'var(--muted)', marginTop: '4px' }}>
+                {selectedTrialItem.category} · {selectedTrialItem.location}
+              </div>
+            </div>
+
+            <div className="client-trial-modal-media">
+              <Image
+                src={selectedTrialItem.image}
+                alt={selectedTrialItem.title}
+                fill
+                sizes="90vw"
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: 'var(--foreground)' }}>
+              {selectedTrialItem.description}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

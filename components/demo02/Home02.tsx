@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
+import { projects, clientTrialWorks, ClientTrialWork } from '@/data/projects';
 
 export default function Home02() {
   const [hoveredSlug, setHoveredSlug] = useState<string>(projects[0].slug);
+  const [selectedTrial, setSelectedTrial] = useState<ClientTrialWork | null>(null);
   const activeProject = projects.find((p) => p.slug === hoveredSlug) || projects[0];
 
   return (
@@ -53,22 +54,23 @@ export default function Home02() {
               </h1>
               <p className="demo02-hero-body">
                 Spatial research, architectural restraint, and human-centered environments.
-                A digital exhibition catalogue of transformative built forms and quiet materiality.
+                A digital exhibition catalogue of transformative built forms, public pauses,
+                and quiet materiality across Mumbai.
               </p>
               <div className="demo02-hero-coords">
-                <div><span>SCALE</span> 1:1 CONTEMPORARY</div>
-                <div><span>LOC</span> MUMBAI / AHMEDABAD / BLR</div>
-                <div><span>STATUS</span> ACTIVE PRACTICE</div>
+                <div><span>SCALE</span> 1:1 IN SITU INTERVENTIONS</div>
+                <div><span>LOC</span> MUMBAI METROPOLITAN / MAHARASHTRA</div>
+                <div><span>STATUS</span> CLIENT TRIAL DOCUMENTATION</div>
               </div>
             </div>
 
-            {/* Right Large Plate Image */}
+            {/* Right Large Plate Image — Featuring Real Client Work */}
             <div className="demo02-hero-right">
               <div className="demo02-plate-frame">
                 <div className="demo02-plate-inner">
                   <Image
-                    src="/hero.jpg"
-                    alt="Studio De.PTH Architecture Work"
+                    src="/client-trial/client-05-borivali-station.jpg"
+                    alt="Studio De.PTH Architecture Work — Borivali Station Civic Plaza"
                     fill
                     priority
                     sizes="(max-width: 900px) 100vw, 55vw"
@@ -76,8 +78,8 @@ export default function Home02() {
                   />
                 </div>
                 <div className="demo02-plate-caption">
-                  <span>PLATE 01 / HERO SPATIAL ENCLOSURE</span>
-                  <span>STUDIO DE.PTH ARCHIVE</span>
+                  <span>PLATE 01 / BORIVALI STATION CIVIC PLAZA</span>
+                  <span>CLIENT TRIAL ARCHIVE 2026</span>
                 </div>
               </div>
             </div>
@@ -92,12 +94,76 @@ export default function Home02() {
           </div>
         </section>
 
+        {/* Exhibition Sheet 02: 05 Client Trial Works */}
+        <section className="demo02-trial-sheet" aria-label="Client Trial Exhibition Plates">
+          <div className="demo02-sheet-header">
+            <div className="demo02-meta-badge">
+              <span className="demo02-red-mark">■</span>
+              <span>EXHIBITION SHEET / NO. 02</span>
+            </div>
+            <div className="demo02-meta-badge">
+              <span>CLIENT TRIAL IN SITU · 05 URBAN HABITATS</span>
+            </div>
+            <div className="demo02-meta-badge">
+              <span>MUMBAI URBAN STUDIES</span>
+            </div>
+          </div>
+
+          <div className="demo02-trial-grid">
+            {clientTrialWorks.map((work) => (
+              <div
+                key={work.id}
+                className={`demo02-trial-card ${work.spanClass}`}
+                onClick={() => setSelectedTrial(work)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedTrial(work);
+                  }
+                }}
+                aria-label={`View exhibition plate for ${work.title}`}
+              >
+                <div className="demo02-trial-meta" style={{ marginBottom: '8px' }}>
+                  <span>
+                    <span className="demo02-red-mark">■</span>
+                    PLATE {work.number} / {work.category}
+                  </span>
+                  <span>{work.year}</span>
+                </div>
+
+                <div className={`demo02-trial-frame ${work.aspectClass}`}>
+                  <Image
+                    src={work.image}
+                    alt={work.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 80vw"
+                    className="demo02-plate-image"
+                  />
+                </div>
+
+                <div className="demo02-trial-meta">
+                  <span className="trial-title">{work.title}</span>
+                  <span className="trial-loc">{work.location}</span>
+                </div>
+                <p style={{ fontSize: '0.86rem', color: '#555', marginTop: '6px', lineHeight: '1.5' }}>
+                  {work.description}
+                </p>
+                <div className="typewriter-label" style={{ fontSize: '0.68rem', color: 'var(--accent)', marginTop: '8px' }}>
+                  [+] INSPECT EXHIBITION PLATE ↗
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Main Interaction: Architectural Project Index */}
         <section className="demo02-index-section" aria-label="Project Index">
           <div className="demo02-index-header">
             <div>
               <span className="demo02-red-mark">■</span>
-              <span className="demo02-section-tag">03 / PROJECT INDEX</span>
+              <span className="demo02-section-tag">03 / PROJECT ARCHIVE INDEX</span>
             </div>
             <Link href="/projects" className="demo02-view-archive-link">
               EXPLORE FULL ARCHIVE [4] →
@@ -159,6 +225,62 @@ export default function Home02() {
           </div>
         </section>
       </div>
+
+      {/* Lightbox Modal for Exhibition Plate */}
+      {selectedTrial && (
+        <div
+          className="client-trial-modal-overlay"
+          onClick={() => setSelectedTrial(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="client-trial-modal-box"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="client-trial-modal-close-btn"
+              onClick={() => setSelectedTrial(null)}
+              aria-label="Close exhibition plate"
+            >
+              [✕ CLOSE]
+            </button>
+
+            <div>
+              <div className="typewriter-label typewriter-accent" style={{ marginBottom: '4px' }}>
+                EXHIBITION PLATE #{selectedTrial.number} · {selectedTrial.year}
+              </div>
+              <h3
+                style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '1.2rem',
+                  letterSpacing: '0.06em',
+                }}
+              >
+                {selectedTrial.title}
+              </h3>
+              <div className="typewriter-label" style={{ color: 'var(--muted)', marginTop: '4px' }}>
+                {selectedTrial.category} · {selectedTrial.location}
+              </div>
+            </div>
+
+            <div className="client-trial-modal-media">
+              <Image
+                src={selectedTrial.image}
+                alt={selectedTrial.title}
+                fill
+                sizes="90vw"
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+
+            <p style={{ fontSize: '0.95rem', lineHeight: '1.7', color: 'var(--foreground)' }}>
+              {selectedTrial.description}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

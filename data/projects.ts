@@ -149,6 +149,98 @@ function mapShivamToProject(sp: ShivamProject, index: number): Project {
   };
 }
 
+export interface ClientTrialWork {
+  id: string;
+  number: string;
+  numberShort: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  location: string;
+  year: string;
+  image: string;
+  description: string;
+  aspectClass: string;
+  spanClass: string;
+}
+
+export const clientTrialWorks: ClientTrialWork[] = [
+  {
+    id: 'trial-05',
+    number: '001',
+    numberShort: '01',
+    title: 'BORIVALI STATION CIVIC PLAZA',
+    subtitle: 'Transit Concourse & Curvilinear Illumination',
+    category: 'TRANSIT INFRASTRUCTURE / PUBLIC REALM',
+    location: 'BORIVALI, MUMBAI',
+    year: '2026',
+    image: '/client-trial/client-05-borivali-station.jpg',
+    description:
+      'Arrival forecourt and pedestrian promenade featuring continuous embedded curvilinear ground illumination ribbons, rhythmic palm colonnades, and modular stone paving.',
+    aspectClass: 'aspect-wide',
+    spanClass: 'span-12',
+  },
+  {
+    id: 'trial-01',
+    number: '002',
+    numberShort: '02',
+    title: 'URBAN SWING / SPATIAL PAUSE',
+    subtitle: 'Micro-Habitat & Kinetic Street Furniture',
+    category: 'MICRO-HABITAT / STREET FURNITURE',
+    location: 'SOUTH MUMBAI',
+    year: '2025',
+    image: '/client-trial/client-01-urban-swing.png',
+    description:
+      'Minimalist kinetic steel canopy structure framing human respite, contemplation, and spontaneous interaction along dense urban vehicular transit corridors.',
+    aspectClass: 'aspect-landscape',
+    spanClass: 'span-7',
+  },
+  {
+    id: 'trial-02',
+    number: '003',
+    numberShort: '03',
+    title: 'CIVIC COURTYARD & MODULAR SETTEES',
+    subtitle: 'Curvilinear Cast Stone Seating Commons',
+    category: 'LANDSCAPE COMMONS / PUBLIC SEATING',
+    location: 'MUMBAI METROPOLITAN',
+    year: '2025',
+    image: '/client-trial/client-02-civic-plaza.png',
+    description:
+      'Curvilinear cast stone seating landscape nestled beneath preserved canopy trees, cultivating community pause and unprogrammed social gathering.',
+    aspectClass: 'aspect-square',
+    spanClass: 'span-5',
+  },
+  {
+    id: 'trial-04',
+    number: '004',
+    numberShort: '04',
+    title: 'RECREATIONAL PARK CONCOURSE',
+    subtitle: 'Public Wellness & Athletic Green Spine',
+    category: 'PUBLIC WELLNESS / URBAN GREEN SPINE',
+    location: 'SUBURBAN MUMBAI',
+    year: '2025',
+    image: '/client-trial/client-04-public-track.png',
+    description:
+      'Continuous curved athletic promenade and jogging circuit interwoven through public park vegetation, balancing community physical wellness with quiet landscape vistas.',
+    aspectClass: 'aspect-landscape',
+    spanClass: 'span-6',
+  },
+  {
+    id: 'trial-03',
+    number: '005',
+    numberShort: '05',
+    title: 'CIVIC MEMORIAL & BOTANICAL PLINTH',
+    subtitle: 'Ceremonial Pavilion & Concentric Plinth',
+    category: 'CIVIC INSTALLATION / MONUMENT COMMONS',
+    location: 'MAHARASHTRA',
+    year: '2024',
+    image: '/client-trial/client-03-memorial-plinth.jpg',
+    description:
+      'Elevated ceremonial pavilion and concentric botanical landscape plinth with calibrated night illumination highlighting historical civic installation.',
+    aspectClass: 'aspect-landscape',
+    spanClass: 'span-6',
+  },
+];
 export function getProjectBySlug(slug: string): Project | undefined {
   const direct = projects.find((p) => p.slug === slug);
   if (direct) return direct;
@@ -166,3 +258,4 @@ export function getAllProjectSlugs(): string[] {
   const shivamSlugs = SHIVAM_PROJECTS.map((p) => p.slug);
   return Array.from(new Set([...studioSlugs, ...shivamSlugs]));
 }
+
