@@ -65,11 +65,6 @@ export default function AboutFinal() {
         <div className="about-final-layout">
           {/* Left Sticky Navbar */}
           <aside className="about-final-sidebar" aria-label="About Page Sections">
-            <div className="about-final-sidebar-header">
-              <span>INDEX // <span className="index-accent">ABOUT</span></span>
-              <span>03 SEC</span>
-            </div>
-
             <ul className="about-final-sidebar-list">
               {NAV_ITEMS.map((item) => {
                 const isActive = activeSection === item.id;
@@ -89,14 +84,6 @@ export default function AboutFinal() {
                 );
               })}
             </ul>
-
-            <div className="about-final-sidebar-footer">
-              <div style={{ fontWeight: 700, color: '#111111', marginBottom: '4px' }}>STUDIO De.PTH</div>
-              <div>PRACTICE DOSSIER</div>
-              <div style={{ color: '#941B1B', marginTop: '6px', fontSize: '0.64rem' }}>
-                TRANSFORMATIVE HABITATS
-              </div>
-            </div>
           </aside>
 
           {/* Right Main Content */}
