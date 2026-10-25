@@ -6,10 +6,12 @@ import Contact02 from '@/components/demo02/Contact02';
 import Contact03 from '@/components/demo03/Contact03';
 import Contact04 from '@/components/demo04/Contact04';
 import Contact05 from '@/components/demo05/Contact05';
+import ContactFinal from '@/components/final/ContactFinal';
 
 export default function ContactPage() {
   const { activeDemo } = useDemo();
 
+  if (activeDemo === 'final') return <ContactFinal />;
   if (activeDemo === 2) return <Contact02 />;
   if (activeDemo === 3) return <Contact03 />;
   if (activeDemo === 4) return <Contact04 />;

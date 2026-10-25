@@ -61,6 +61,16 @@ export default function DemoSwitcher() {
         >
           05
         </button>
+        <span className="demo-switcher-divider">/</span>
+        <button
+          type="button"
+          onClick={() => setActiveDemo('final')}
+          className={`demo-switcher-btn ${activeDemo === 'final' ? 'active' : ''}`}
+          disabled={isTransitioning}
+          title="Concept Final: Clean Blank Canvas"
+        >
+          FINAL
+        </button>
       </div>
     </aside>
   );

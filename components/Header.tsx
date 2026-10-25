@@ -6,12 +6,19 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useDemo } from '@/context/DemoContext';
 
+interface NavLinkItem {
+  num: string;
+  label: string;
+  href: string;
+  badge?: string;
+}
+
 export default function Header() {
   const pathname = usePathname();
   const { activeDemo } = useDemo();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: NavLinkItem[] = [
     { num: '01', label: 'HOME', href: '/' },
     { num: '02', label: 'ABOUT US', href: '/about' },
     { num: '03', label: 'PROJECTS', href: '/projects' },
@@ -31,30 +38,49 @@ export default function Header() {
     <header className={`site-header header-demo-${activeDemo}`}>
       <div className="container header-inner">
         <Link href="/" className="brand-link" onClick={closeMenu}>
-          <Image
-            src="/logo/studio-depth-logo-trimmed.png"
-            alt="Studio De.PTH"
-            width={44}
-            height={36}
-            priority
-            className="brand-logo-img"
-          />
-          {activeDemo === 5 ? (
-            <span className="brand-title">
-              STUDIO <span style={{ color: '#941B1B' }}>De.PTH</span>
-            </span>
+          {activeDemo === 'final' ? (
+            <>
+              <Image
+                src="/logo/studio-depth-logo-trimmed.png"
+                alt="Studio De.PTH"
+                width={72}
+                height={58}
+                priority
+                className="brand-logo-img brand-logo-img-final"
+                style={{ height: '50px', width: 'auto', maxHeight: '54px' }}
+              />
+              <span className="brand-title" style={{ fontSize: '1.22rem', letterSpacing: '0.12em' }}>
+                STUDIO <span style={{ color: '#941B1B' }}>De.</span>PTH
+              </span>
+            </>
           ) : (
-            <span className="brand-title">
-              STUDIO <span className="brand-title-accent">DE.</span>PTH
-            </span>
-          )}
-          {activeDemo === 4 && (
-            <span className="header-journal-stamp">JOURNAL VOL. 04</span>
-          )}
-          {activeDemo === 5 && (
-            <span className="header-journal-stamp" style={{ borderColor: '#941B1B', color: '#941B1B' }}>
-              MONOGRAPH VOL. 05
-            </span>
+            <>
+              <Image
+                src="/logo/studio-depth-logo-trimmed.png"
+                alt="Studio De.PTH"
+                width={44}
+                height={36}
+                priority
+                className="brand-logo-img"
+              />
+              {activeDemo === 5 ? (
+                <span className="brand-title">
+                  STUDIO <span style={{ color: '#941B1B' }}>De.PTH</span>
+                </span>
+              ) : (
+                <span className="brand-title">
+                  STUDIO <span className="brand-title-accent">DE.</span>PTH
+                </span>
+              )}
+              {activeDemo === 4 && (
+                <span className="header-journal-stamp">JOURNAL VOL. 04</span>
+              )}
+              {activeDemo === 5 && (
+                <span className="header-journal-stamp" style={{ borderColor: '#941B1B', color: '#941B1B' }}>
+                  MONOGRAPH VOL. 05
+                </span>
+              )}
+            </>
           )}
         </Link>
 
@@ -64,7 +90,7 @@ export default function Header() {
             {navLinks.map((link) => {
               const active = isActive(link.href);
               const displayLabel =
-                activeDemo === 1 || activeDemo === 4 || activeDemo === 5
+                activeDemo === 1 || activeDemo === 4 || activeDemo === 5 || activeDemo === 'final'
                   ? link.label
                   : `${link.num} ${link.label}`;
 
@@ -107,7 +133,7 @@ export default function Header() {
             {navLinks.map((link) => {
               const active = isActive(link.href);
               const displayLabel =
-                activeDemo === 1 || activeDemo === 4 || activeDemo === 5
+                activeDemo === 1 || activeDemo === 4 || activeDemo === 5 || activeDemo === 'final'
                   ? link.label
                   : `${link.num} ${link.label}`;
 

@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type DemoConcept = 1 | 2 | 3 | 4 | 5;
+export type DemoConcept = 1 | 2 | 3 | 4 | 5 | 'final';
 
 interface DemoContextType {
   activeDemo: DemoConcept;
@@ -24,14 +24,14 @@ export function DemoProvider({ children }: { children: ReactNode }) {
     // Check URL search params or localStorage
     const params = new URLSearchParams(window.location.search);
     const demoParam = params.get('demo');
-    if (demoParam === '1' || demoParam === '2' || demoParam === '3' || demoParam === '4' || demoParam === '5') {
-      setActiveDemoState(Number(demoParam) as DemoConcept);
+    if (demoParam === '1' || demoParam === '2' || demoParam === '3' || demoParam === '4' || demoParam === '5' || demoParam === 'final') {
+      setActiveDemoState(demoParam === 'final' ? 'final' : (Number(demoParam) as DemoConcept));
       return;
     }
 
     const saved = localStorage.getItem('studio_depth_demo_concept');
-    if (saved === '1' || saved === '2' || saved === '3' || saved === '4' || saved === '5') {
-      setActiveDemoState(Number(saved) as DemoConcept);
+    if (saved === '1' || saved === '2' || saved === '3' || saved === '4' || saved === '5' || saved === 'final') {
+      setActiveDemoState(saved === 'final' ? 'final' : (Number(saved) as DemoConcept));
     }
   }, []);
 

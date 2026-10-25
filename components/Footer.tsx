@@ -10,6 +10,11 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Concept Final has no footer on any page per user specification
+  if (activeDemo === 'final') {
+    return null;
+  }
+
   if (activeDemo === 5) {
     return (
       <footer

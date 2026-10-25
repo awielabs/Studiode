@@ -4,8 +4,11 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
+import { useDemo } from '@/context/DemoContext';
+
 export default function LoadingScreen() {
   const pathname = usePathname();
+  const { activeDemo } = useDemo();
   const [visible, setVisible] = useState(true);
   const [fadingOut, setFadingOut] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -19,14 +22,14 @@ export default function LoadingScreen() {
     setVisible(true);
     setFadingOut(false);
 
-    // Keep visible for exactly 2 seconds (2000ms), then smoothly fade out
+    // Keep visible for 2 to 3 seconds (2200ms), then smoothly fade out
     timerRef.current = setTimeout(() => {
       setFadingOut(true);
       exitTimerRef.current = setTimeout(() => {
         setVisible(false);
         setFadingOut(false);
-      }, 500);
-    }, 2000);
+      }, 400);
+    }, 2200);
   }, []);
 
   // Trigger loading screen on initial mount and on every page/route change
@@ -73,20 +76,54 @@ export default function LoadingScreen() {
       aria-hidden="true"
     >
       <div className="loading-logo-box">
-        <Image
-          src="/logo/studio-depth-logo-trimmed.png"
-          alt="Studio De.PTH"
-          width={150}
-          height={120}
-          priority
-          className="loading-logo-img"
-        />
-        <div className="loading-title">
-          Studio <span>De.</span>PTH
-        </div>
-        <div className="loading-tagline">
-          Design for People + Transformative Habitats
-        </div>
+        {activeDemo === 'final' ? (
+          <>
+            <Image
+              src="/logo/studio-depth-logo-trimmed.png"
+              alt="Studio De.PTH"
+              width={260}
+              height={208}
+              priority
+              className="loading-logo-img loading-logo-img-final"
+              style={{
+                width: '260px',
+                height: 'auto',
+                maxWidth: '85vw',
+                filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.06))',
+              }}
+            />
+            <div
+              className="loading-title"
+              style={{
+                fontSize: '1.4rem',
+                letterSpacing: '0.14em',
+                marginTop: '1.2rem',
+                fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
+                fontWeight: 700,
+              }}
+            >
+              Studio <span style={{ color: '#941B1B' }}>De.</span>PTH
+            </div>
+            {/* Bottom text removed for final concept to make more space for logo */}
+          </>
+        ) : (
+          <>
+            <Image
+              src="/logo/studio-depth-logo-trimmed.png"
+              alt="Studio De.PTH"
+              width={150}
+              height={120}
+              priority
+              className="loading-logo-img"
+            />
+            <div className="loading-title">
+              Studio <span>De.</span>PTH
+            </div>
+            <div className="loading-tagline">
+              Design for People + Transformative Habitats
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
