@@ -205,7 +205,7 @@ export default function HomeFinal() {
                   marginTop: '3px',
                 }}
               >
-                Design for People + Transformative Habitats
+                © All Rights Reserved
               </div>
             </div>
           </div>
