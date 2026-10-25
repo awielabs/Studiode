@@ -4,98 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 
 export default function AboutFinal() {
-  const scrollToFounders = () => {
-    const el = document.getElementById('the-founders');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="demo02-canvas section-padding" style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '6rem' }}>
       <div className="container">
-        {/* Page Header (Renamed to About Us, badges removed) */}
-        <div
-          style={{
-            marginBottom: '45px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            borderBottom: '1px solid #ebebeb',
-            paddingBottom: '2rem',
-            gap: '1.5rem',
-          }}
-        >
-          <div>
-            <h1
-              style={{
-                fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
-                fontSize: 'clamp(2.4rem, 4.5vw, 3.6rem)',
-                fontWeight: 700,
-                color: '#111111',
-                margin: 0,
-                letterSpacing: '0.02em',
-              }}
-            >
-              About Us
-            </h1>
-            <p
-              style={{
-                fontFamily: "var(--font-mono, 'Space Mono', monospace)",
-                fontSize: '0.85rem',
-                color: '#666666',
-                marginTop: '0.5rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Practice Origins, Leadership & Architectural Philosophy
-            </p>
-          </div>
-
-          {/* Prominent, Highly Visible Scroll Button similar to Concept 4 */}
-          <div>
-            <button
-              type="button"
-              onClick={scrollToFounders}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '10px',
-                padding: '10px 20px',
-                backgroundColor: '#111111',
-                color: '#ffffff',
-                border: '1px solid #111111',
-                fontFamily: "var(--font-mono, 'Space Mono', monospace)",
-                fontSize: '0.82rem',
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'all 0.25s ease',
-                boxShadow: '0 4px 14px rgba(0,0,0,0.12)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#941B1B';
-                e.currentTarget.style.borderColor = '#941B1B';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#111111';
-                e.currentTarget.style.borderColor = '#111111';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-              aria-label="Scroll down to the founders section"
-            >
-              <span>Scroll to Explore</span>
-              <span style={{ fontSize: '1.1rem', lineHeight: 1 }}>↓</span>
-            </button>
-          </div>
-        </div>
-
         {/* 1. THE FOUNDERS (Reordered to first) */}
-        <section id="the-founders" className="demo02-dossier-row" style={{ paddingTop: '1rem' }}>
+        <section id="the-founders" className="demo02-dossier-row" style={{ paddingTop: '2rem' }}>
           <div className="demo02-dossier-left">
             <span className="demo02-dossier-num" style={{ color: '#941B1B' }}>01</span>
             <span className="demo02-dossier-tag">THE FOUNDERS</span>
