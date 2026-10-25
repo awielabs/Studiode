@@ -63,6 +63,13 @@ function ProjectsFinalContent() {
                   : String(activeProject.description),
                 coverImage: activeProject.mainImage,
                 images: activeProject.gallery,
+                details: {
+                  topology: activeProject.typology,
+                  location: `${activeProject.location}, India`,
+                  year: activeProject.year,
+                  scale: activeProject.area,
+                  status: activeProject.status,
+                },
               }}
               onBack={handleBackToGrid}
             />

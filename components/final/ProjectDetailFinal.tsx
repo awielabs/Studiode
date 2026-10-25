@@ -131,6 +131,122 @@ export default function ProjectDetailFinal({ project, onBack }: ProjectDetailFin
               {project.subtitle}
             </p>
           )}
+
+          {/* Project Details Spec Row */}
+          <div
+            style={{
+              marginTop: '1.75rem',
+              paddingTop: '1.25rem',
+              borderTop: '1px solid #eeeeee',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+              gap: '1.5rem',
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.14em',
+                  color: '#888888',
+                  textTransform: 'uppercase',
+                  marginBottom: '4px',
+                }}
+              >
+                LOCATION
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
+                  fontSize: '0.95rem',
+                  color: '#111111',
+                  fontWeight: 600,
+                }}
+              >
+                {project.details?.location || project.location || 'Mumbai, India'}
+              </div>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.14em',
+                  color: '#888888',
+                  textTransform: 'uppercase',
+                  marginBottom: '4px',
+                }}
+              >
+                PROGRAM
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
+                  fontSize: '0.95rem',
+                  color: '#111111',
+                  fontWeight: 600,
+                }}
+              >
+                {project.details?.topology || project.topology
+                  ? (project.details?.topology || project.topology).includes('Habitat')
+                    ? (project.details?.topology || project.topology)
+                    : `${project.details?.topology || project.topology} Habitat`
+                  : 'Residential Habitat'}
+              </div>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.14em',
+                  color: '#888888',
+                  textTransform: 'uppercase',
+                  marginBottom: '4px',
+                }}
+              >
+                CHRONOLOGY
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
+                  fontSize: '0.95rem',
+                  color: '#111111',
+                  fontWeight: 600,
+                }}
+              >
+                {project.details?.year || project.year || '2026'}
+              </div>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.14em',
+                  color: '#888888',
+                  textTransform: 'uppercase',
+                  marginBottom: '4px',
+                }}
+              >
+                SCALE
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
+                  fontSize: '0.95rem',
+                  color: '#111111',
+                  fontWeight: 600,
+                }}
+              >
+                {project.details?.scale || '680 sqm'}
+              </div>
+            </div>
+          </div>
         </header>
 
         {/* Small Image Viewable on One Scroll */}
