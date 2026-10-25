@@ -2,9 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { projects } from '@/data/projects';
-import SectionLabel from '@/components/SectionLabel';
 
 export default function HomeFinal() {
   const featuredSlides = [
@@ -49,9 +46,6 @@ export default function HomeFinal() {
     }, 5500);
     return () => clearInterval(timer);
   }, [isPaused, featuredSlides.length]);
-
-  const activeSlide = featuredSlides[currentSlide];
-  const featuredProjects = projects.slice(0, 4);
 
   return (
     <div className="final-home-container" style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingBottom: '5rem' }}>
@@ -227,119 +221,6 @@ export default function HomeFinal() {
                 Design for People + Transformative Habitats
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction Section (Concept 1 Design) */}
-      <section className="section-padding intro-section" aria-label="Studio Introduction" style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
-        <div className="container">
-          <div className="intro-grid">
-            <SectionLabel number="01" title="STUDIO" />
-            <div className="intro-content">
-              <h1 className="intro-heading" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.2 }}>
-                Designing spaces
-                <br />
-                with purpose.
-              </h1>
-              <p className="intro-body" style={{ fontSize: '1.05rem', color: '#555555', lineHeight: 1.7, maxWidth: '640px' }}>
-                Studio De.PTH explores architecture, spatial design and transformative habitats
-                through a people-focused approach. Rooted in contextual materiality, climate
-                responsiveness, and architectural restraint, our work cultivates quiet spaces
-                that enrich everyday life.
-              </p>
-              <div style={{ marginTop: '32px' }}>
-                <Link
-                  href="/about"
-                  className="typewriter-label"
-                  style={{
-                    color: '#111111',
-                    textDecoration: 'underline',
-                    textUnderlineOffset: '6px',
-                    fontWeight: 700,
-                    letterSpacing: '0.08em',
-                  }}
-                >
-                  Read Studio Story →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Selected Projects Section (Concept 1 Editorial Layout) */}
-      <section className="section-padding" aria-label="Featured Projects" style={{ paddingTop: '3.5rem' }}>
-        <div className="container">
-          <div style={{ marginBottom: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-            <SectionLabel number="02" title="SELECTED PROJECTS" />
-            <Link
-              href="/projects"
-              className="typewriter-label"
-              style={{ color: '#941B1B', fontWeight: 700, letterSpacing: '0.08em' }}
-            >
-              View All Projects →
-            </Link>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '2.5rem',
-            }}
-          >
-            {featuredProjects.map((project) => (
-              <article
-                key={project.slug}
-                style={{
-                  border: '1px solid #eeeeee',
-                  backgroundColor: '#ffffff',
-                  transition: 'all 0.3s ease',
-                  overflow: 'hidden',
-                }}
-              >
-                <Link href={`/projects/${project.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div style={{ position: 'relative', width: '100%', height: '260px', overflow: 'hidden' }}>
-                    <Image
-                      src={project.coverImage}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div style={{ padding: '1.25rem 1.5rem' }}>
-                    <div
-                      style={{
-                        fontSize: '0.75rem',
-                        letterSpacing: '0.12em',
-                        color: '#941B1B',
-                        textTransform: 'uppercase',
-                        fontWeight: 700,
-                        marginBottom: '6px',
-                      }}
-                    >
-                      {project.topology}
-                    </div>
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
-                        fontSize: '1.15rem',
-                        fontWeight: 700,
-                        color: '#111111',
-                        marginBottom: '8px',
-                      }}
-                    >
-                      {project.title}
-                    </h3>
-                    <p style={{ fontSize: '0.86rem', color: '#666666', lineHeight: 1.5, margin: 0 }}>
-                      {project.subtitle || project.description}
-                    </p>
-                  </div>
-                </Link>
-              </article>
-            ))}
           </div>
         </div>
       </section>
