@@ -146,7 +146,7 @@ export default function HomeFinal() {
               margin: '0 auto',
               display: 'flex',
               flexWrap: 'wrap',
-              justifyContent: 'space-between',
+              justifyContent: 'flex-end',
               alignItems: 'flex-start',
               paddingTop: '20px',
               paddingBottom: '24px',
@@ -154,34 +154,6 @@ export default function HomeFinal() {
               gap: '1.25rem',
             }}
           >
-            {/* Left side info */}
-            <div>
-              <div
-                style={{
-                  fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
-                  fontSize: '0.98rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.06em',
-                  color: '#111111',
-                  textTransform: 'uppercase',
-                }}
-              >
-                [ 0{currentSlide + 1} / 0{featuredSlides.length} ] {activeSlide.title}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-mono, 'Space Mono', monospace)",
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.1em',
-                  color: '#777777',
-                  marginTop: '4px',
-                  textTransform: 'uppercase',
-                }}
-              >
-                {activeSlide.location} · {activeSlide.category}
-              </div>
-            </div>
-
             {/* Right side lines strictly as specified */}
             <div style={{ textAlign: 'right' }}>
               <div
