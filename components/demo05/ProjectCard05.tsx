@@ -176,21 +176,6 @@ export default function ProjectCard05({ project, onSelect }: ProjectCard05Props)
           </span>
           <span style={{ color: '#999999' }}>{project.area}</span>
         </div>
-
-        <p
-          style={{
-            fontSize: '0.82rem',
-            color: '#666666',
-            lineHeight: 1.55,
-            marginTop: '0.2rem',
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}
-        >
-          {project.summary}
-        </p>
       </div>
     </article>
   );

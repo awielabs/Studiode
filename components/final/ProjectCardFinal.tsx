@@ -147,22 +147,6 @@ export default function ProjectCardFinal({ project, onSelect }: ProjectCardFinal
         >
           {project.typology} {project.area ? `· ${project.area}` : ''}
         </div>
-
-        <p
-          style={{
-            fontSize: '0.84rem',
-            fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
-            color: '#666666',
-            lineHeight: 1.6,
-            marginTop: '0.15rem',
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}
-        >
-          {project.summary}
-        </p>
       </div>
     </article>
   );
