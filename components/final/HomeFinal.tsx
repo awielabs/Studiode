@@ -146,15 +146,62 @@ export default function HomeFinal() {
               margin: '0 auto',
               display: 'flex',
               flexWrap: 'wrap',
-              justifyContent: 'flex-end',
-              alignItems: 'flex-start',
+              justifyContent: 'space-between',
+              alignItems: 'center',
               paddingTop: '20px',
               paddingBottom: '24px',
               borderBottom: '1px solid #eeeeee',
               gap: '1.25rem',
             }}
           >
-            {/* Right side lines strictly as specified */}
+            {/* Left side: Copyright info with logo */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div
+                style={{
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: '50%',
+                  border: '1.5px solid #111111',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  color: '#111111',
+                  lineHeight: 1,
+                  flexShrink: 0,
+                }}
+              >
+                C
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                    fontSize: '0.78rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.18em',
+                    color: '#111111',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  COPYRIGHT
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono, 'Space Mono', monospace)",
+                    fontSize: '0.74rem',
+                    letterSpacing: '0.04em',
+                    color: '#666666',
+                  }}
+                >
+                  All Rights Reserved
+                </div>
+              </div>
+            </div>
+
+            {/* Right side: Studio De.PTH first statement */}
             <div style={{ textAlign: 'right' }}>
               <div
                 style={{
@@ -177,7 +224,7 @@ export default function HomeFinal() {
                   marginTop: '3px',
                 }}
               >
-                © All Rights Reserved
+                Design for People + Transformative Habitats
               </div>
             </div>
           </div>
