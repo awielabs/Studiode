@@ -79,17 +79,16 @@ export default function LoadingScreen() {
         {activeDemo === 'final' ? (
           <>
             <Image
-              src="/logo/studio-depth-final-logo.jpg"
+              src="/logo/studio_depth_logo.svg"
               alt="Studio De.PTH"
-              width={260}
-              height={160}
+              width={280}
+              height={198}
               priority
               className="loading-logo-img loading-logo-img-final"
               style={{
-                width: '260px',
+                width: '280px',
                 height: 'auto',
                 maxWidth: '85vw',
-                filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.06))',
               }}
             />
             <div
@@ -109,12 +108,17 @@ export default function LoadingScreen() {
         ) : (
           <>
             <Image
-              src="/logo/studio-depth-logo-trimmed.png"
+              src="/logo/studio_depth_logo.svg"
               alt="Studio De.PTH"
-              width={150}
-              height={120}
+              width={200}
+              height={141}
               priority
               className="loading-logo-img"
+              style={{
+                width: '200px',
+                height: 'auto',
+                maxWidth: '85vw',
+              }}
             />
             <div className="loading-title">
               STUDIO <span>D<span className="brand-e">e</span>.</span>PTH

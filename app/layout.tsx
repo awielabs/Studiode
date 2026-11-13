@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     'Contemporary Architecture',
     'Mumbai Architecture',
   ],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

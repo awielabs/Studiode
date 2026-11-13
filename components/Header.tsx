@@ -41,27 +41,28 @@ export default function Header() {
           {activeDemo === 'final' ? (
             <>
               <Image
-                src="/logo/studio-depth-final-logo.jpg"
+                src="/logo/studio_depth_logo.svg"
                 alt="Studio De.PTH"
-                width={76}
-                height={50}
+                width={110}
+                height={78}
                 priority
                 className="brand-logo-img brand-logo-img-final"
-                style={{ height: '50px', width: 'auto', maxHeight: '54px' }}
+                style={{ height: '76px', width: 'auto', maxHeight: '78px' }}
               />
-              <span className="brand-title" style={{ fontSize: '1.22rem', letterSpacing: '0.12em' }}>
+              <span className="brand-title brand-title-final" style={{ fontSize: '1.25rem', letterSpacing: '0.12em' }}>
                 STUDIO <span style={{ color: '#941B1B' }}>D<span className="brand-e">e</span>.</span>PTH
               </span>
             </>
           ) : (
             <>
               <Image
-                src="/logo/studio-depth-logo-trimmed.png"
+                src="/logo/studio_depth_logo.svg"
                 alt="Studio De.PTH"
-                width={44}
-                height={36}
+                width={68}
+                height={48}
                 priority
                 className="brand-logo-img"
+                style={{ height: '48px', width: 'auto' }}
               />
               {activeDemo === 5 ? (
                 <span className="brand-title">

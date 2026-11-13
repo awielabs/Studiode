@@ -11,13 +11,13 @@ interface DemoContextType {
 }
 
 const DemoContext = createContext<DemoContextType>({
-  activeDemo: 1,
+  activeDemo: 'final',
   setActiveDemo: () => {},
   isTransitioning: false,
 });
 
 export function DemoProvider({ children }: { children: ReactNode }) {
-  const [activeDemo, setActiveDemoState] = useState<DemoConcept>(1);
+  const [activeDemo, setActiveDemoState] = useState<DemoConcept>('final');
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
   useEffect(() => {

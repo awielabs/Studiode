@@ -63,28 +63,35 @@ export default function AboutFinal() {
     <div className="demo02-canvas" style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingTop: '2.5rem', paddingBottom: '6rem' }}>
       <div className="container">
         <div className="about-final-layout">
-          {/* Left Sticky Navbar */}
-          <aside className="about-final-sidebar" aria-label="About Page Sections">
-            <ul className="about-final-sidebar-list">
-              {NAV_ITEMS.map((item) => {
-                const isActive = activeSection === item.id;
-                return (
-                  <li key={item.id}>
-                    <button
-                      type="button"
-                      onClick={() => scrollToSection(item.id)}
-                      className={`about-final-nav-btn ${isActive ? 'active' : ''}`}
-                      aria-current={isActive ? 'true' : undefined}
-                    >
-                      <span className="about-final-nav-num">{item.num}</span>
-                      <span className="about-final-nav-label">{item.label}</span>
-                      {isActive && <span className="about-final-nav-arrow">→</span>}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </aside>
+          {/* Left Sticky Navbar with Hover-Expandable Details */}
+          <div className="about-final-sidebar-wrapper">
+            <aside className="about-final-sidebar" aria-label="About Page Sections">
+              <div className="about-sidebar-header">
+                <span className="about-sidebar-header-icon">§</span>
+                <span className="about-sidebar-header-title">SECTIONS</span>
+              </div>
+              <ul className="about-final-sidebar-list">
+                {NAV_ITEMS.map((item) => {
+                  const isActive = activeSection === item.id;
+                  return (
+                    <li key={item.id}>
+                      <button
+                        type="button"
+                        onClick={() => scrollToSection(item.id)}
+                        className={`about-final-nav-btn ${isActive ? 'active' : ''}`}
+                        aria-current={isActive ? 'true' : undefined}
+                        title={`${item.num} ${item.label}`}
+                      >
+                        <span className="about-final-nav-num">{item.num}</span>
+                        <span className="about-final-nav-label">{item.label}</span>
+                        {isActive && <span className="about-final-nav-arrow">→</span>}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </aside>
+          </div>
 
           {/* Right Main Content */}
           <main className="about-final-content">
@@ -99,27 +106,56 @@ export default function AboutFinal() {
                 <span className="demo02-dossier-tag">THE FOUNDERS</span>
               </div>
               <div className="demo02-dossier-right">
-                <div className="demo02-founders-stack">
+                {/* Founders Side by Side Grid */}
+                <div
+                  className="final-founders-grid"
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gap: '32px',
+                    alignItems: 'stretch',
+                  }}
+                >
                   {/* Founder 1 */}
-                  <div className="demo02-founder-entry">
-                    <div className="demo02-founder-portrait-box" style={{ border: '1px solid #ebebeb' }}>
-                      <Image
-                        src="/images/founder-1.jpg"
-                        alt="Founder / Architect"
-                        width={400}
-                        height={500}
-                        className="demo02-founder-img"
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div className="demo02-plate-caption">
+                  <div
+                    className="final-founder-card"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      border: '1px solid #e8e8e8',
+                      backgroundColor: '#fafafa',
+                      padding: '20px',
+                      borderRadius: '2px',
+                    }}
+                  >
+                    <div className="demo02-founder-portrait-box">
+                      <div
+                        style={{
+                          position: 'relative',
+                          width: '100%',
+                          height: '360px',
+                          border: '1px solid #ebebeb',
+                          backgroundColor: '#f5f5f5',
+                          overflow: 'hidden',
+                        }}
+                      >
+                        <Image
+                          src="/images/founder-1.jpg"
+                          alt="Founder / Architect"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 420px"
+                          style={{ objectFit: 'cover', objectPosition: 'top center' }}
+                        />
+                      </div>
+                      <div className="demo02-plate-caption" style={{ padding: '8px 2px 0 2px' }}>
                         <span>FIGURE 1.1 — PRINCIPAL ARCHITECT</span>
                       </div>
                     </div>
-                    <div className="demo02-founder-info">
+                    <div className="demo02-founder-info" style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                       <div className="founder-id-tag">PARTNER 01</div>
-                      <h3 className="founder-title-text">FOUNDER NAME</h3>
-                      <div className="founder-role-sub">Architect / Founding Principal</div>
-                      <p className="demo02-dossier-p" style={{ fontSize: '0.92rem', color: '#555555', lineHeight: 1.65 }}>
+                      <h3 className="founder-title-text" style={{ margin: '2px 0 6px 0' }}>FOUNDER NAME</h3>
+                      <div className="founder-role-sub" style={{ marginBottom: '12px' }}>Architect / Founding Principal</div>
+                      <p className="demo02-dossier-p" style={{ fontSize: '0.9rem', color: '#555555', lineHeight: 1.65, margin: 0 }}>
                         Overseeing architectural research, spatial articulation, and structural craftsmanship.
                         Dedicated to contextual materiality and people-focused transformative habitats.
                       </p>
@@ -127,25 +163,45 @@ export default function AboutFinal() {
                   </div>
 
                   {/* Founder 2 */}
-                  <div className="demo02-founder-entry">
-                    <div className="demo02-founder-portrait-box" style={{ border: '1px solid #ebebeb' }}>
-                      <Image
-                        src="/founders/founder-02.jpg"
-                        alt="Founder / Architect"
-                        width={400}
-                        height={500}
-                        className="demo02-founder-img"
-                        style={{ objectFit: 'cover' }}
-                      />
-                      <div className="demo02-plate-caption">
+                  <div
+                    className="final-founder-card"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      border: '1px solid #e8e8e8',
+                      backgroundColor: '#fafafa',
+                      padding: '20px',
+                      borderRadius: '2px',
+                    }}
+                  >
+                    <div className="demo02-founder-portrait-box">
+                      <div
+                        style={{
+                          position: 'relative',
+                          width: '100%',
+                          height: '360px',
+                          border: '1px solid #ebebeb',
+                          backgroundColor: '#f5f5f5',
+                          overflow: 'hidden',
+                        }}
+                      >
+                        <Image
+                          src="/founders/founder-02.jpg"
+                          alt="Founder / Architect"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 420px"
+                          style={{ objectFit: 'cover', objectPosition: 'top center' }}
+                        />
+                      </div>
+                      <div className="demo02-plate-caption" style={{ padding: '8px 2px 0 2px' }}>
                         <span>FIGURE 1.2 — PRINCIPAL ARCHITECT</span>
                       </div>
                     </div>
-                    <div className="demo02-founder-info">
+                    <div className="demo02-founder-info" style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                       <div className="founder-id-tag">PARTNER 02</div>
-                      <h3 className="founder-title-text">FOUNDER NAME</h3>
-                      <div className="founder-role-sub">Architect / Founding Principal</div>
-                      <p className="demo02-dossier-p" style={{ fontSize: '0.92rem', color: '#555555', lineHeight: 1.65 }}>
+                      <h3 className="founder-title-text" style={{ margin: '2px 0 6px 0' }}>FOUNDER NAME</h3>
+                      <div className="founder-role-sub" style={{ marginBottom: '12px' }}>Architect / Founding Principal</div>
+                      <p className="demo02-dossier-p" style={{ fontSize: '0.9rem', color: '#555555', lineHeight: 1.65, margin: 0 }}>
                         Directing ecological habitat integration, material tectonics, and environmental geometry
                         across diverse landscapes and vernacular craft traditions.
                       </p>
